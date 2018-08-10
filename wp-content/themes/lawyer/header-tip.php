@@ -33,11 +33,10 @@
 	         	                       <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgMobile.png">
 	                               	 </object>			
 	                            </li>
-        						<li><a href="http://legalcenter.pro/o-kompanii">о компании </a></li>
-        						<li><a  href="http://legalcenter.pro/uslugi">услуги </a></li>
-        						<li><a  href="http://legalcenter.pro/kejsy">кейсы</a></li>
-        						<!--<li><a  href="http://legalcenter.pro/information">информация </a></li>-->
-        						<li><a  href="http://legalcenter.pro/kontakty">контакты</a></li>
+        						<li><a href="http://lawyer.io/o-kompanii">о компании </a></li>
+        						<li><a  href="http://lawyer.io/uslugi">услуги </a></li>
+        						<li><a  href="http://lawyer.io/kejsy">кейсы</a></li>
+        						<li><a  href="http://lawyer.io/kontakty">контакты</a></li>
                                 <li><a href="tel:+78182408800" class="header__info_phnmedia" >+7 (8182) 40-88-00</a></li>
                                 <li><a href="#ctaForm" class="headerMain__btn smoothscroll">Задать вопрос </a></li>
 							</ul>
