@@ -82,21 +82,27 @@ function lawyer_style() {
 	/*Google-fonts*/
 	wp_enqueue_style( 'google-fonts' , 'https://fonts.googleapis.com/icon?family=Material+Icons' ); 
 	/*font-awesome*/
-	wp_enqueue_style( 'font-awesome' , 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' ); 
-   /*Datepicker css */
+	// wp_enqueue_style( 'font-awesome' , 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' ); 
+     /*Datepicker css */
 	wp_enqueue_style( 'datapiker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/css/bootstrap.min.css'); 
 	wp_enqueue_style( 'datetimepicker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/css/bootstrap-datetimepicker.min.css'); 
+	/*Owlcarousel*/
+	// wp_enqueue_style( 'Owlcarousel' , get_template_directory_uri() . '/src/libs/owlcarousel/dist/assets/owl.carousel.min.css'); 
+	// wp_enqueue_style( 'owl.theme' , get_template_directory_uri() . '/src/libs/owlcarousel/dist/assets/owl.theme.default.min.css'); 
+
 	/*Fonts*/
 	wp_enqueue_style( 'lawyer-fonts' , get_template_directory_uri() . '/src/css/fonts.css', array ( 'lawyer-style' ) ); 
 	/*Media*/
-	wp_enqueue_style( 'lawyer-media' , get_template_directory_uri() . '/src/css/media.css');
+	// wp_enqueue_style( 'lawyer-media' , get_template_directory_uri() . '/src/css/media.css');
 	/* custom-css */
-	wp_enqueue_style( 'lawyer-custom-css' , get_template_directory_uri() . '/src/css/custom-css.css'); 
-	/*Owlcarousel*/
-	wp_enqueue_style( 'Owlcarousel' , get_template_directory_uri() . '/src/libs/owlcarousel/dist/assets/owl.carousel.min.css'); 
-	wp_enqueue_style( 'owl.theme' , get_template_directory_uri() . '/src/libs/owlcarousel/dist/assets/owl.theme.default.min.css'); 
+	// wp_enqueue_style( 'lawyer-custom-css' , get_template_directory_uri() . '/src/css/custom-css.css'); 
+	
     /*main-style.css*/
-	wp_enqueue_style( 'main-style.css' , get_template_directory_uri() . '/src/css/main-style.css'); 
+	// wp_enqueue_style( 'main-style.css' , get_template_directory_uri() . '/src/css/main-style.css'); 
+	
+
+   /*bundle.min.css*/
+	wp_enqueue_style( 'bundle.min.css' , get_template_directory_uri() . '/css/bundle.min.css'); 
 	/* Главные стили*/
 	wp_enqueue_style( 'lawyer-style', get_stylesheet_uri() );
 
@@ -108,40 +114,41 @@ add_action( 'wp_enqueue_scripts', 'lawyer_style' );
 /* Подключаем скрипты */
 function lawyer_scripts() {
 
-    /*Уничтожаем jQuery из коробки  */
+	/*Уничтожаем jQuery из коробки  */
 	wp_deregister_script( 'jquery' );
+	/*bundle.min.js*/
+	wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/js/bundle.min.js');
+	/* API Яндекс карты */ 
+	wp_enqueue_script( 'api-maps' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
+	/*modernizr.js*/
+	wp_enqueue_script( 'modernizr' , get_template_directory_uri() . '/src/libs/modernizr/modernizr.js' , array ('jquery'), ''); 
+
 	/* Подключаем jQuery*/
-	wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/src/libs/jquery/jquery-1.11.2.min.js'); 
+	// wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/src/libs/jquery/jquery.min.js'); 
+ 
+
+	/* Yandex map */ 
+	// wp_enqueue_script( 'map' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
 	/* mask-iput*/ 
-	wp_enqueue_script( 'maskinput' , get_template_directory_uri() . '/src/libs/maskedinput/maskedinput.js' , array ('jquery'), '', true); 
-	
-    /* API Яндекс карты */ 
-	 wp_enqueue_script( 'api-maps' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
-
-	 /*modernizr.js*/
-	 wp_enqueue_script( 'modernizr' , get_template_directory_uri() . '/libs/modernizr/modernizr.js' , array ('jquery'), ''); 
-	 /* Datepicker*/ 
-	  wp_enqueue_script( 'moment-with-locales' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/moment-with-locales.min.js' , array ('jquery'), '', true); 
-	  wp_enqueue_script( 'bootstrap' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap.min.js' , array ('jquery'), '', true); 
-	  wp_enqueue_script( 'bootstrap-datetimepicker' , get_template_directory_uri() . '/src//libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js' , array ('jquery'), '', true); 
+	// wp_enqueue_script( 'maskinput' , get_template_directory_uri() . '/src/libs/maskedinput/maskedinput.js' , array ('jquery'), '', true); 
+	// wp_enqueue_script( 'maskinput' , get_template_directory_uri() . '/src/libs/mask/jquery.mask.js' , array ('jquery'), '', true); 
 
 
-	  /*Owlcarousel*/
-	  wp_enqueue_script( 'Owlcarousel' , get_template_directory_uri() . '/src//libs/owlcarousel/dist/owl.carousel.min.js' , array ('jquery'), '', true); 
+
+	/* Datepicker*/ 
+	wp_enqueue_script( 'bootstrap' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap.min.js' , array ('jquery'), '', true); 
+	wp_enqueue_script( 'moment-with-locales' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/moment-with-locales.min.js' , array ('jquery'), '', true); 
+	wp_enqueue_script( 'bootstrap-datetimepicker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js' , array ('jquery'), '', true); 
 
 
-	  /* Common*/ 
-	   wp_enqueue_script( 'script' , get_template_directory_uri() . '/src/js/script.js' , array ('jquery'), '', true); 
+	/*Owlcarousel*/
+	// wp_enqueue_script( 'Owlcarousel' , get_template_directory_uri() . '/src//libs/owlcarousel/dist/owl.carousel.min.js' , array ('jquery'), '', true); 
 
-	  /*slyScrollBar-js*/
-	  // wp_enqueue_script( 'slyScrollBar' , get_template_directory_uri() . '/libs/slyScrollbar/plugins.js' , array ('jquery'), ''); 
-	  // wp_enqueue_script( 'slyScrollBarSly' , get_template_directory_uri() . '/libs/slyScrollbar/sly.min.js' , array ('jquery'), ''); 
-	  // wp_enqueue_script( 'slyScrollBarHorizontal' , get_template_directory_uri() . '/libs/slyScrollbar/horizontal.js' , array ('jquery'), ''); 
+	/* Top top  */ 
+	// wp_enqueue_script( 'js-topScroll' , get_template_directory_uri() . '/src/libs/topScroll/scrolls.js' , array ('jquery'), '', true); 
 
-
-	  /* Top top  */ 
-	  // wp_enqueue_script( 'js-topScroll' , get_template_directory_uri() . '/libs/topScroll/scrolls.js' , array ('jquery'), '', true); 
-
+	/* Common*/ 
+	// wp_enqueue_script( 'script' , get_template_directory_uri() . '/src/js/script.js' , array ('jquery'), '', true); 
 
 
 

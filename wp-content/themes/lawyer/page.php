@@ -489,7 +489,14 @@ endif
 
           </div>
         </div><!-- //ctaMainForm -->
+
+        <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+            <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
+               обработкой персональных данных
+            </a>
+        </p>
     </div>
+
   </section>
 
 

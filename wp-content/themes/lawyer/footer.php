@@ -207,78 +207,7 @@
 
 </div><!-- #page -->
 
-
-
-	<!-- Top-Top -->
-	<script src="<?php bloginfo('template_url'); ?>/libs/topScroll/scrolls.js"></script>
-    <!-- Yandex map -->
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-	<script>
-		// for demo purposes
-		for(var i = 0; i < 100; i++) {
-			// $(".demo").append("<p>jQuery Scrolls.js: Back To Top Plugin Example</p>")
-		}
-	</script>
-	<script type="text/javascript">
-           scroller.init();
-	</script>
-
-	<script>
-		// Slider case
-
-		jQuery(document).ready(function(){
-		   jQuery('.slider-container .owl-carousel').owlCarousel({
-		       loop:true,
-		       nav:false,
-		       dots:true,
-		       autoplaySpeed:1000,
-		       autoplayHoverPause:false,
-		       margin:20,
-		       autoplay:true,
-		       responsive:{
-		           0:{
-		               items:1
-		           },
-		           768:{
-		               items:2
-		           },
-		           1200:{
-		               items:2
-		           }
-		       }
-		   })
-
-    });
-
-		// function scrollHorizontally(e) { //включает горизонтальный скрол элемента колесом
-		//     e = window.event || e;
-		// 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))); //это шаг колеса для разных браузеров
-		//     document.documentElement.scrollLeft -= (delta * 40); //прокручиваем всю страницу
-		// 		e.preventDefault();
-		// 	};
-		  
-		// function addMouseWell(elem, callback) { //вешает кроссплатформенный обработчик на колесо мыши над элементом
-		// 	if (elem.addEventListener) {
-		// 		if ('onwheel' in document) {
-		// 			elem.addEventListener("wheel", callback);
-		// 		} else if ('onmousewheel' in document) {
-		// 			elem.addEventListener("mousewheel", callback);
-		// 		} else {
-		// 			elem.addEventListener("MozMousePixelScroll", callback);
-		// 		}
-		// 	} else {
-		// 		elem.attachEvent("onmousewheel", callback);
-		// 	}
-		// }
-
-		// addMouseWell(window, scrollHorizontally);
-
-	</script>
-
 <?php wp_footer(); ?>
-
-
-
 
 
 </body>

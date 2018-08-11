@@ -210,26 +210,26 @@ $bg_quote = ot_get_option('quote__bg');
 ======================== 
 -->
 
-<?php
-// $bg_profit = ot_get_option('profit__bg');
-// var_dump($bg_headerWrapper);
-?>
+<!-- <?php
+$bg_profit = ot_get_option('profit__bg');
+var_dump($bg_headerWrapper);
+?> -->
 <style type="text/css">
-/*	.profit {
+	.profit {
 		background: <?php echo $bg_profit['background-color'] ?> url('<?php echo $bg_profit['background-image'] ?>') <?php echo $bg_profit['background-position'] ?> <?php echo $bg_profit['background-repeat'] ?>;
 		background-size: <?php echo $bg_profit['background-size'] ?>;
-	}*/
+	}
 
-/* 	.profit {
+ 	.profit {
 			background-image:  url('<?php echo $bg_profit['background-image'] ?>');
 			background-size: cover;
 		    background-color: <?php echo $bg_profit['background-color'] ?>;
 		    background-position:  center bottom;
 		    background-repeat: no-repeat;
-		} */
+		} 
 </style>
 
-<section class="profit" style="display: none;">
+<section class="profit" >
 	<?php if (ot_get_option( 'profit__title' )) {?>
 	     <h2><?php echo ot_get_option( 'profit__title' ); ?></h2>
 	<?php } ?>	
@@ -238,11 +238,14 @@ $bg_quote = ot_get_option('quote__bg');
 		<div class="profitWrapp__firstLine">
 			<div class="profitItem profitItem__bg_1">
 				<div class="profitItem__img">
+					
+					<img src="<?php echo get_template_directory_uri() ?>/img/profit-img1.png" alt="">
 					<?php if (ot_get_option( 'profit__img_ps1' )) {?>
 					     <img  class="profitItem__img_ps1" src="<?php echo ot_get_option( 'profit__img_ps1' ); ?>">
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
+					<h5> <span>3000</span><br> судебных заседаний</h5>
 					<?php if (ot_get_option( 'profit__title_1' )) {?>
 					     <?php echo ot_get_option( 'profit__title_1' ); ?>
 					<?php } ?>	
@@ -251,11 +254,13 @@ $bg_quote = ot_get_option('quote__bg');
 
 			<div class="profitItem profitItem__bg_2">
 				<div class="profitItem__img">
+					<img src="<?php echo get_template_directory_uri() ?>/img/profit-img2.png" alt="">
 					<?php if (ot_get_option( 'profit__img_ps2' )) {?>
 					     <img  class="profitItem__img_ps2" src="<?php echo ot_get_option( 'profit__img_ps2' ); ?>">
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
+					<h5><span>95%</span> <br> выигранных дел</h5>
 					<?php if (ot_get_option( 'profit__title_2' )) {?>
 					     <?php echo ot_get_option( 'profit__title_2' ); ?>
 					<?php } ?>	
@@ -265,11 +270,13 @@ $bg_quote = ot_get_option('quote__bg');
 
 			<div class="profitItem profitItem__bg_3">
 				<div class="profitItem__img">
+					<img src="<?php echo get_template_directory_uri() ?>/img/profit-img3.png" alt="">
 					<?php if (ot_get_option( 'profit__img_ps3' )) {?>
 					     <img  class="profitItem__img_ps3" src="<?php echo ot_get_option( 'profit__img_ps3' ); ?>">
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
+					<h5><span>500</span><br> млн рублей взыскано в пользу клиентов</h5>
 					<?php if (ot_get_option( 'profit__title_3' )) {?>
 					     <?php echo ot_get_option( 'profit__title_3' ); ?>
 					<?php } ?>	
@@ -282,11 +289,13 @@ $bg_quote = ot_get_option('quote__bg');
 
 			<div class="profitItem profitItem__bg_4">
 				<div class="profitItem__img">
+					<img src="<?php echo get_template_directory_uri() ?>/img/profit-img4.png" alt="">
 					<?php if (ot_get_option( 'profit__img_ps4' )) {?>
 					     <img  class="profitItem__img_ps4" src="<?php echo ot_get_option( 'profit__img_ps4' ); ?>">
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
+					<h5>С нами быстро, выгодно и надёжно</h5>
 					<?php if (ot_get_option( 'profit__title_4' )) {?>
 					     <?php echo ot_get_option( 'profit__title_4' ); ?>
 					<?php } ?>	
@@ -295,11 +304,13 @@ $bg_quote = ot_get_option('quote__bg');
 
 			<div class="profitItem profitItem__bg_5">
 				<div class="profitItem__img">
+					<img src="<?php echo get_template_directory_uri() ?>/img/profit-img5.png" alt="">
 					<?php if (ot_get_option( 'profit__img_ps5' )) {?>
 					     <img  class="profitItem__img_ps5" src="<?php echo ot_get_option( 'profit__img_ps5' ); ?>">
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
+					<h5>Работаем с <br>2007 года</h5>
 					<?php if (ot_get_option( 'profit__title_5' )) {?>
 					     <?php echo ot_get_option( 'profit__title_5' ); ?>
 					<?php } ?>	
@@ -308,11 +319,13 @@ $bg_quote = ot_get_option('quote__bg');
 
 			<div class="profitItem profitItem__bg_6">
 				<div class="profitItem__img">
+					<img src="<?php echo get_template_directory_uri() ?>/img/profit-img6.png" alt="">
 					<?php if (ot_get_option( 'profit__img_ps6' )) {?>
 					     <img  class="profitItem__img_ps6" src="<?php echo ot_get_option( 'profit__img_ps6' ); ?>">
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
+					<h5>Работаем в  Москве, Архангельске, Санкт-Петербурге и Сочи </h5>
 					<?php if (ot_get_option( 'profit__title_6' )) {?>
 					     <?php echo ot_get_option( 'profit__title_6' ); ?>
 					<?php } ?>	
@@ -323,7 +336,7 @@ $bg_quote = ot_get_option('quote__bg');
 		
 	</div>
 </section>
-<section class="profit" >
+<section class="profit" style="display: none;" >
 	<h2>Преимущества</h2>
 	<div class="profitWrapp">
 		
@@ -446,13 +459,15 @@ $bg_quote = ot_get_option('quote__bg');
     	<div class="aboutWworkItem__arrow"></div>
     	<div class="aboutWworkItem__block">
     		<div class="aboutWworkItem__img">
-    			<div class="bg-abWork1"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork1.png" alt="">
+    			<!-- <div class="bg-abWork1"></div> -->
     		</div>
     		<div class="aboutWworkItem__dot">
     			<div class="delimetr"></div>
     		</div>
     		<div class="aboutWworkItem__number">
-    			<div class="bg-abWork_numb_1"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork_numb_1.png" alt="">
+    			<!-- <div class="bg-abWork_numb_1"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
     			<h5>Выслушиваем вас или приглашаем на встречу</h5>
@@ -461,13 +476,15 @@ $bg_quote = ot_get_option('quote__bg');
 
     	<div class="aboutWworkItem__block">
     		<div class="aboutWworkItem__img">
-    			<div class="bg-abWork2"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork2.png" alt="">
+    			<!-- <div class="bg-abWork2"></div> -->
     		</div>
     		<div class="aboutWworkItem__dot">
     			<div class="delimetr"></div>
     		</div>
     		<div class="aboutWworkItem__number">
-    			<div class="bg-abWork_numb_2"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork_numb_2.png" alt="">
+    			<!-- <div class="bg-abWork_numb_2"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
     			<h5>Проводим правовой анализ вашего дела</h5>
@@ -476,13 +493,15 @@ $bg_quote = ot_get_option('quote__bg');
 
     	<div class="aboutWworkItem__block">
     		<div class="aboutWworkItem__img">
-    			<div class="bg-abWork3"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork3.png" alt="">
+    			<!-- <div class="bg-abWork3"></div> -->
     		</div>
     		<div class="aboutWworkItem__dot">
     			<div class="delimetr"></div>
     		</div>
     		<div class="aboutWworkItem__number">
-    			<div class="bg-abWork_numb_3"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork_numb_3.png" alt="">
+    			<!-- <div class="bg-abWork_numb_3"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
     			<h5>Составляем необходимые документы</h5>
@@ -491,11 +510,13 @@ $bg_quote = ot_get_option('quote__bg');
 
     	<div class="aboutWworkItem__block">
     		<div class="aboutWworkItem__img">
-    			<div class="bg-abWork4"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork4.png" alt="">
+    			<!-- <div class="bg-abWork4"></div> -->
     		</div>
     		<div class="aboutWworkItem__dot"></div>
     		<div class="aboutWworkItem__number">
-    			<div class="bg-abWork_numb_4"></div>
+    			<img src="<?php echo get_template_directory_uri() ?>/img/abWork_numb_4.png" alt="">
+    			<!-- <div class="bg-abWork_numb_4"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
     			<h5>Защищаем вас в суде</h5>
@@ -593,11 +614,11 @@ $bg_quote = ot_get_option('quote__bg');
                      <div class="ctaFormTab__img">
 
                         <!-- Телефон трубка -->
-                        <svg class="iconSvg iconSvg__act" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         	 width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                         	
-                        		<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="1.5225" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                        		<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#fff" stroke-width="1.5225" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
                         		M47.617,38.784c-1.69-1.484-3.658-2.703-5.629-3.815c-2.215-1.247-4.535-1.512-6.684,0.314c-0.137,0.117-0.322,0.178-0.471,0.287
                         		c-0.944,0.689-1.777,0.64-2.624-0.234c-2.43-2.508-4.934-4.946-7.336-7.478c-1.538-1.621-1.553-1.877-0.182-3.665
                         		c1.591-2.071,1.713-4.267,0.453-6.39c-1.228-2.072-2.731-3.997-4.239-5.885c-0.867-1.083-2.167-1.499-3.576-1.362
@@ -618,7 +639,7 @@ $bg_quote = ot_get_option('quote__bg');
                 <div class="ctaFormTab__item">
                      <div class="ctaFormTab__img">
                         <!-- Календарь -->
-                        <svg class="iconSvg"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg "  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         	 width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                         	
@@ -727,6 +748,12 @@ $bg_quote = ot_get_option('quote__bg');
 
           </div>
         </div><!-- //ctaMainForm -->
+  
+    <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+    	<a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
+           обработкой персональных данных
+        </a>
+    </p>
     </div>
   </section>
 

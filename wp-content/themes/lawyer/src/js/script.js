@@ -1,42 +1,32 @@
 // jQuery(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		jQuery("img[src*='svg']").attr("src", function() {
-			return jQuery(this).attr("src").replace(".svg", ".png");
-		});
-	};
-
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-// 	jQuery("form").submit(function() { //Change
-// 		var th = jQuery(this);
-// 		jQuery.ajax({
-// 			type: "POST",
-// 			url: "mail.php", //Change
-// 			data: th.serialize()
-// 		}).done(function() {
-// 			alert("Thank you!");
-// 			setTimeout(function() {
-// 				// Done Functions
-// 				th.trigger("reset");
-// 			}, 1000);
-// 		});
-// 		return false;
-// 	});
-
-	//Chrome Smooth Scroll
-	// try {
-	// 	jQuery.browserSelector();
-	// 	if(jQuery("html").hasClass("chrome")) {
-	// 		jQuery.smoothScroll();
-	// 	}
-	// } catch(err) {
-
+	// //SVG Fallback
+	// if(!Modernizr.svg) {
+	// 	jQuery("img[src*='svg']").attr("src", function() {
+	// 		return jQuery(this).attr("src").replace(".svg", ".png");
+	// 	});
 	// };
 
-	jQuery("img, a").on("dragstart", function(event) { event.preventDefault(); });
+	// jQuery("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
+  // Табы на форме обратной связи 
+
+  jQuery(document).ready(function(){
+    
+    jQuery(".ctaFormTabs__items").not(":first").hide();
+    jQuery(".ctaFormTab__item").click(function() {
+        jQuery(" .ctaFormTab__item").removeClass("ctaFormTab__item-active").eq(jQuery(this).index()).addClass("ctaFormTab__item-active");
+        jQuery("svg .iconSvg ").removeClass("iconSvg__act").eq(jQuery(this).index()).addClass("iconSvg__act");
+        jQuery(".ctaFormTabs__items").hide().eq(jQuery(this).index()).fadeIn();
+      }).eq(0).addClass("ctaFormTab__item-active");
+    
+    jQuery('.iconSvg:first').addClass("iconSvg__act");
+      
+  });  
+
+
+
+
 
 
  //  Загрузка прелоадера 
@@ -47,9 +37,6 @@ jQuery(window).load(function() {
 	jQuery(".loader").delay(400).fadeOut("slow");
 
 });
-
-
-
 
 // Убираем class="smoothscroll" у первого элемента меню 
 jQuery(document).ready(function(){
@@ -69,8 +56,6 @@ jQuery('.smoothscroll').on('click', function (e) {
     });
 
   }); 
-
-
 }); 
 
 // Событие hover для секции кейсы 
@@ -94,21 +79,8 @@ jQuery(document).ready(function(){
 }); 
 
 
-// Табы на форме обратной связи 
 
-jQuery(document).ready(function(){
-  
-  jQuery(".ctaFormTabs__items").not(":first").hide();
-  jQuery('.iconSvg').not(":first").addClass("iconSvg__act");
-  jQuery(".ctaFormTab__item").click(function() {
-      jQuery(" .ctaFormTab__item").removeClass("ctaFormTab__item-active").eq(jQuery(this).index()).addClass("ctaFormTab__item-active");
-      jQuery(".iconSvg").removeClass("iconSvg__act").eq(jQuery(this).index()).addClass("iconSvg__act");
-    	jQuery(".ctaFormTabs__items").hide().eq(jQuery(this).index()).fadeIn();
-    }).eq(0).addClass("ctaFormTab__item-active");
-  
 
-    
-});  
      // Меню на главной странице 
 
       jQuery(document).ready(function(){
@@ -120,7 +92,7 @@ jQuery(document).ready(function(){
       link.click(function(){
           link.toggleClass('menu-link_active');
           menu.toggleClass('menu_active');  
-          logo_info.toggle();         
+          // logo_info.toggle();         
           jQuery('.menu_active ul li a').css('color','#2D476A');
       });
       nav_link.click(function(){
@@ -241,10 +213,6 @@ jQuery(document).ready(function(){
 
               });
           });
-
-
-
-
           }
      },
      mql = window.matchMedia('all and (max-width: 768px)');
@@ -252,7 +220,32 @@ jQuery(document).ready(function(){
      mql.addListener(handleMatchMedia); 
 
 
+/*
+   Слайдер 
+*/
 
+    jQuery(document).ready(function(){
+       jQuery('.slider-container .owl-carousel').owlCarousel({
+           loop:true,
+           nav:false,
+           dots:true,
+           autoplaySpeed:1000,
+           autoplayHoverPause:false,
+           margin:20,
+           autoplay:true,
+           responsive:{
+               0:{
+                   items:1
+               },
+               768:{
+                   items:2
+               },
+               1200:{
+                   items:2
+               }
+           }
+        })
+    });
 
   
 /* Адаптивная таблица*/
@@ -385,20 +378,23 @@ jQuery(document).ready(function(){
 
 
  // Событие hover для замены картинок с активных на ховера
-  jQuery('.imgServHover').hide();
 
+      jQuery(document).ready(function(){
+        jQuery('.servicesItems, .casesItem').on('mouseenter', function() {
+          jQuery(this).find('.imgServ').toggle();
+          jQuery(this).find('.imgServHover').addClass('imgServ__rotate').toggle();
+          jQuery(this).find('.servicesItems__title h4').css('color','#fff');
+        });
+        jQuery('.servicesItems, .casesItem').on('mouseleave', function() {
+          jQuery(this).find('.imgServ').toggle();
+          jQuery(this).find('.imgServHover').addClass('imgServ__rotate').toggle();
+          jQuery(this).find('.servicesItems__title h4').css('color','#161617');
+        });
+
+        jQuery('.imgServHover').hide();      
+
+      });
       
-      jQuery('.servicesItems, .casesItem').on('mouseenter', function() {
-        jQuery(this).find('.imgServ').toggle();
-        jQuery(this).find('.imgServHover').addClass('imgServ__rotate').toggle();
-        jQuery(this).find('.servicesItems__title h4').css('color','#fff');
-      });
-      jQuery('.servicesItems, .casesItem').on('mouseleave', function() {
-        jQuery(this).find('.imgServ').toggle();
-        jQuery(this).find('.imgServHover').addClass('imgServ__rotate').toggle();
-        jQuery(this).find('.servicesItems__title h4').css('color','#161617');
-      });
-
 
       /* Datepicker */
       
@@ -457,31 +453,6 @@ jQuery(document).ready(function(){
       });
 
 
-
-// jQuery(document).ready(function(){
-
-//    var handleMatchMedia = function(mediaQuery) {
-//       if (mediaQuery.matches) {
-//         jQuery('.contactBlock__span').append('<br>');           
-//        } else {
-//         jQuery('.contactBlock br').css('display','none');
-//        }
-//    },
-//    mql = window.matchMedia('all and (max-width: 780px)');
-//    handleMatchMedia(mql);
-//    mql.addListener(handleMatchMedia); 
-
-// });
-
-
-//       jQuery('.csColumn ').addClass('jscssColumn');
-//       jQuery('.csRow ').removeClass('csColumn ');
-
-//      window.addEventListener("orientationchange", function() {
-//       jQuery(".menu_active").toggle();
-//     }, false);
-
-
   /* Скрываем нотисы после отправленного удачного/неудачного сообщения */
     jQuery('.ctaFormTab__item').click(function(){
        jQuery('.wpcf7-not-valid-tip').hide();
@@ -490,67 +461,14 @@ jQuery(document).ready(function(){
 
 
 
+/*
+  Запускаем скроллер
+*/
 
-
-     // Slider case
-
-     // jQuery(document).ready(function(){
-     //    jQuery('.slider-container .owl-carousel').owlCarousel({
-     //        loop:true,
-     //        nav:true,
-     //        // padding:10,
-     //        autoplay:false,
-     //        responsive:{
-     //            0:{
-     //                items:1
-     //            },
-     //            600:{
-     //                items:1
-     //            },
-     //            1000:{
-     //                items:1
-     //            }
-     //        }
-     //    })
-     // });
-
-
-     // jQuery(document).ready(function(){
-     //    jQuery('#slider-testimonials .owl-carousel').owlCarousel({
-     //        loop:true,
-     //        nav:true,
-     //        autoplay:false,
-     //        responsive:{
-     //            0:{
-     //                items:1
-     //            },
-     //            600:{
-     //                items:1
-     //            },
-     //            1000:{
-     //                items:1
-     //            }
-     //        }
-     //    })
-     // });
-     // jQuery(document).ready(function(){
-     //    jQuery('#slider-afisha .owl-carousel').owlCarousel({
-     //        loop:true,
-     //        nav:true,
-     //        autoplay:true,
-     //        responsive:{
-     //            0:{
-     //                items:1
-     //            },
-     //            600:{
-     //                items:2
-     //            },
-     //            1000:{
-     //                items:3
-     //            }
-     //        }
-     //    })
-     // });    
+$(document).ready(function(){
+  scroller.init();
+});
+   
 
 
 

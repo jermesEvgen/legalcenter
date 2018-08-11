@@ -1,13 +1,6 @@
 /*==========  Desktop First Method  ==========*/
-
-
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1070px) {
-
-/*	.header__info div {
-		width: 100%;
-	}*/
 	.js-menu__hidden {
 		display: none;
 	}
@@ -22,9 +15,6 @@
 	}
 
 }
-
-
-
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -43,18 +33,11 @@
 		font-size: 16px;
 	}
 
-
-
-
-
    .header__info_phn {
-   	display: none;
-   }
-   .header__info div {
-   	/*max-width: 300px;*/
+		display: none;
    }
 	.servicesItems  {
-   width: 33.33%;
+		width: 33.33%;
     }
     .aboutOffer__wrapper {
     	flex-wrap: wrap;
@@ -76,7 +59,6 @@
     .aboutWrap {
     	padding: 0;
     }
-
     .ctaFormTab {
     	width: 100%;
     	text-align: left;
@@ -100,12 +82,10 @@
     	flex-wrap: wrap;
     	flex-direction: column;
     	position: relative;
-
     }
     .contactBlock div {
     	margin: .5em 0;
     }
-
 }
 
 /* Small Devices, Tablets */
@@ -139,30 +119,16 @@
 	 	display: flex;
 	 	align-items: center;
 	 	justify-content: flex-end;
-
-	 	/*position: absolute;*/
-	 	/*display: flex;*/
-	 	/*flex-direction: column;*/
-	 	/*align-items: flex-end;*/
-	 }
+    }
 	 .header__info_phn {
 	 	font-size: 16px; 
-	 	/*display: none;*/
-	 }
-
-
-
-	 a.btnHeader {
+	}
+     a.btnHeader {
 	 	font-size: 17px;
 	 }
-
 	 .header__top.cd-auto-hide-header {
 	 	padding: 1em 0;
 	 }
-
-
-	 
-
 	 .ctaFormTab {
 	 	width: 100%;
 	 	text-align: left;
@@ -191,12 +157,6 @@
 	 .ctaFormTabs__items_input {
 	 	width: 100%;
 	 }
-	 .ctaFormTabs__btn {
-	 	/*width: 100%;*/
-	 	/*max-width: 250px;*/
-	 	/*font-size: 24px;*/
-	 	/*padding: .2em 0;*/
-	 }
 	 .input-group {
 	 	width: 100%;
 	 }
@@ -206,25 +166,12 @@
 	 .contactBlock {
 	 	bottom: 0;
 	 }
-
-
 }
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 700px) {
-
-}
-
-
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-/*	.header__info div {
-		width: 100%;
-	}*/
 	.header__top.cd-auto-hide-header {
 		padding: 0 .2em;
 	}
-
 	.servicesItems  {
 		width: 100%;
 	}
@@ -234,8 +181,6 @@
 	.aboutContent__bt.aboutContent__bt_pos {
 		width: 70%;
 		margin: 1em auto;
-
-		
 	}
    .profitItem__title {
 		width: 90%;
@@ -245,14 +190,8 @@
 		width: 100px;
 		padding: .2em;
 	}
-	.aboutWworkItem__img img {
-		/*width: 55px;*/
-	}
-
-
 	.header__info_qst  {
 		width: 100%;
-
 	}
 
 	.aboutWworkItem__number img{
@@ -267,32 +206,24 @@
 		background-image: none;
 	}
 	.profitItem__img {
-		/*width: 30%;*/
 		text-align: center;
 	}
 
 	.ctaMain h6, .ctaMain h2 {
 		width: 90%;
 	}
-
-
 	.offerBlock__title {
 		width: 100%;
 		text-align: center;
 		align-items: center;
 	}
-/*	.aboutWworkItem__block {
-		max-width: 300px;
-	}*/
 	.ctaMain {
 		padding:2em 0; 
 	}
 	aside {
-		/*border: 1px solid red;*/
 		width: 90%;
 		margin: 0 auto;
 		display: flex;
-		/*padding: 1em;  */
 	}
 
   
@@ -301,10 +232,6 @@
     	margin: 0 auto; 
     	font-size: 14px;
     }
-
-
-
-
 }
 
 /* Custom, iPhone Retina */

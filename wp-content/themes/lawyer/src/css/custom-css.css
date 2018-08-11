@@ -9,79 +9,44 @@ ul.services__item {
 
 ul.services__item li.menu-item {
 	width: 25%;
-	/*max-width: 150px;*/
-	/*height: 100%;*/
 	min-height: 285px;
-
 	background-color: #F1F4F6;
 	border:1px solid #fff;
-	/*transition: .2s all;*/
 }
 
 ul.services__item li.menu-item a {
 	width: 100%;
 	height: 100%;
 	min-height: 285px;
-	
-	display: -webkit-flex;
-	display: -webkit-box;
-	display: -moz-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	flex-direction: column;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	align-items: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	justify-content: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	​text-align: center;
+	text-align: center;
 	font-family: "UbuntuRegular";
 	font-size: 23px;
 	color: #000;
-	/*border: 1px solid blue; */
-}
-.menu-image-hover-wrapper {
-	/*min-height: 40%;*/
-	/*padding: 2em 0;*/
-	/*border: 1px solid red; */
 }
 .menu-image-title {
 	height: 110px;
 	line-height: 1.4;
 	text-align: center;
-	/*border: 1px solid red; */
 	position: relative;
+	width: 100%;
+	margin: 0 auto;
 }
 ul.services__item li.menu-item a:hover,
-ul.services__item li.menu-item a:focus
- {
+ul.services__item li.menu-item a:focus{
 	text-decoration: none;
 	color: #fff;
 	background-color: #93BDD3;
 }
-
-
 .menu-image-title {
 	width: 80%;
 }
-
-
 /* Активная страница */
 .current-menu-item.page_item.current_page_item {
 	background-color: #93BDD3;
 }
-
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 992px) {
 	ul.services__item li.menu-item {
@@ -106,8 +71,6 @@ ul.services__item li.menu-item a:focus
 		min-width: 100%; 
 		height: 100%;
 		min-height: 100px;
-		/*border: 2px solid green; */
-
 	}
 	h1 {font-size: 24px;}
 	.menu-image-title {
@@ -120,12 +83,10 @@ ul.services__item li.menu-item a:focus
 	   width: 100%;
 	   height: 100%;
 	   min-height: 100px;
-
 	}
 	ul.services__item li.menu-item a span {
 		height: 100%;
 		width: 100%;
-		/*border: 2px solid red; */
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -139,21 +100,16 @@ ul.services__item li.menu-item a:focus
 		width: 80%;
 		padding: 0 1.6em 0 .6em;
 	}
-
 }
-
-
 
 
 /* Fonts responsed */
 
-
-
 /* Запрет прокрутки */
 .fixed {
-position:fixed; /*позицианируем чтобы исчез скролл*/
-width:100%; /*что бы верстка не складывалась по ширине*/
-height: 100%;
+	position:fixed;
+	width:100%;
+	height: 100%;
 }
 
 
@@ -217,19 +173,7 @@ height: 100%;
     background: url('../img/css_sprites.png') -10px -10px;
 }
 
-
-
-/*  Media Device */
-@media only screen and (max-width : 1200px) {
-   
-}
-
-
-
-
 .menu-item a.menu-image-hovered.menu-image-title-after .menu-image-hover-wrapper {
 	padding: 0;
 	height: 80px;
-	/*border: 1px solid red;*/
-
 }

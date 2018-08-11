@@ -19,3 +19,43 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+
+.profitItem.profitItem__bg_1{
+	background-image: url(img/profit-img-bg1.png) !important;
+}
+.profitItem.profitItem__bg_2{
+	background-image: url(img/profit-img-bg2.png)!important;
+}
+.profitItem.profitItem__bg_3{
+	background-image: url(img/profit-img-bg3.png)!important;
+}
+
+.profitItem.profitItem__bg_4{
+	background-image: url(img/profit-img-bg4.png)!important;
+}
+.profitItem.profitItem__bg_5{
+	background-image: url(img/profit-img-bg5.png)!important;
+}
+.profitItem.profitItem__bg_6{
+	background-image: url(img/profit-img-bg6.png)!important;
+}
+
+.menu-image-title {
+	height: 110px;
+	line-height: 1.4;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.privacy-policy {
+	width: 100%;
+	text-align: center;
+	font-family: 'UbuntuLight';
+}
+
+
+
