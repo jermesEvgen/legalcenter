@@ -49,8 +49,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 100%;
 	margin: 0 auto;
 }
-
-
 .privacy-policy {
 	width: 100%;
 	text-align: center;
@@ -58,4 +56,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 
+.profit {
+	width: 100%;
+	background-image: url(img/bgImgpProfit.jpg)!important; 
+	background-repeat: no-repeat;
+	background-size: cover; 
+	padding: 3em 0;
 
+}

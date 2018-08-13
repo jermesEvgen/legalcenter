@@ -32,14 +32,14 @@ gulp.task('css', function(){
 // scripts-all 
 gulp.task('scripts', function(){
 	 return gulp.src([
-	  'src/libs/jquery/jquery-1.11.2.min.js',
+	  // 'src/libs/jquery/jquery.min.js',
 	  'src/libs/mask/jquery.mask.js',
 	  'src//libs/owlcarousel/dist/owl.carousel.min.js',
 	  'src/libs/topScroll/scrolls.js',
+	  'src/libs/datapiker/bootstrap/js/bootstrap.min.js',
+	  'src/libs/datapiker/bootstrap/js/moment-with-locales.min.js',
+	  'src/libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js',
 	  'src/js/script.js'
-	  // 'src/libs/datapiker/bootstrap/js/bootstrap.min.js'
-	  // 'src/libs/datapiker/bootstrap/js/moment-with-locales.min.js',
-	  // 'src/libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js'
 	  ])
 	  .pipe(concat('bundle.min.js'))
 	  .pipe(uglify())

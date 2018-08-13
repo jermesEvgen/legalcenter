@@ -210,10 +210,6 @@ $bg_quote = ot_get_option('quote__bg');
 ======================== 
 -->
 
-<!-- <?php
-$bg_profit = ot_get_option('profit__bg');
-var_dump($bg_headerWrapper);
-?> -->
 <style type="text/css">
 	.profit {
 		background: <?php echo $bg_profit['background-color'] ?> url('<?php echo $bg_profit['background-image'] ?>') <?php echo $bg_profit['background-position'] ?> <?php echo $bg_profit['background-repeat'] ?>;
@@ -614,7 +610,7 @@ var_dump($bg_headerWrapper);
                      <div class="ctaFormTab__img">
 
                         <!-- Телефон трубка -->
-                        <svg class="iconSvg " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         	 width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                         	

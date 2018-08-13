@@ -115,9 +115,11 @@ add_action( 'wp_enqueue_scripts', 'lawyer_style' );
 function lawyer_scripts() {
 
 	/*Уничтожаем jQuery из коробки  */
-	wp_deregister_script( 'jquery' );
+	// wp_deregister_script( 'jquery' );
 	/*bundle.min.js*/
-	wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/js/bundle.min.js');
+	wp_enqueue_script( 'bundle-js' , get_template_directory_uri() . '/js/bundle.min.js');
+	/*common-js*/
+	wp_enqueue_script( 'common-js' , get_template_directory_uri() . '/js/common.js');
 	/* API Яндекс карты */ 
 	wp_enqueue_script( 'api-maps' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
 	/*modernizr.js*/
@@ -136,9 +138,9 @@ function lawyer_scripts() {
 
 
 	/* Datepicker*/ 
-	wp_enqueue_script( 'bootstrap' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap.min.js' , array ('jquery'), '', true); 
-	wp_enqueue_script( 'moment-with-locales' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/moment-with-locales.min.js' , array ('jquery'), '', true); 
-	wp_enqueue_script( 'bootstrap-datetimepicker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js' , array ('jquery'), '', true); 
+	// wp_enqueue_script( 'bootstrap' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap.min.js' , array ('jquery'), '', true); 
+	// wp_enqueue_script( 'moment-with-locales' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/moment-with-locales.min.js' , array ('jquery'), '', true); 
+	// wp_enqueue_script( 'bootstrap-datetimepicker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js' , array ('jquery'), '', true); 
 
 
 	/*Owlcarousel*/
