@@ -40,9 +40,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .profitItem.profitItem__bg_6{
 	background-image: url(img/profit-img-bg6.png)!important;
 }
-
-
-
 html.js .loader_inner {
 	background-image: url("img/preloader.gif")!important;
 }
@@ -60,8 +57,6 @@ html.js .loader_inner {
 	text-align: center;
 	font-family: 'UbuntuLight';
 }
-
-
 .profit {
 	width: 100%;
 	background-image: url(img/bgImgpProfit.jpg)!important; 

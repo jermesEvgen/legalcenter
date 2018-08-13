@@ -7,7 +7,7 @@
 
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> onload="ShowPositon(64.532286, 40.523189)">
+<body <?php body_class(); ?> >
 	<div class="loader">
 		<div class="loader_inner"></div>
 	</div>

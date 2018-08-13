@@ -114,12 +114,17 @@ add_action( 'wp_enqueue_scripts', 'lawyer_style' );
 /* Подключаем скрипты */
 function lawyer_scripts() {
 
+   /* Jquery коробка*/
+	wp_enqueue_script('jquery');
+
 	/*Уничтожаем jQuery из коробки  */
 	// wp_deregister_script( 'jquery' );
+	/*jquery*/
+	// wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/src/libs/jquery/jquery.min.js');
 	/*bundle.min.js*/
-	wp_enqueue_script( 'bundle-js' , get_template_directory_uri() . '/js/bundle.min.js');
+	wp_enqueue_script( 'bundle-js' , get_template_directory_uri() . '/js/bundle.min.js', array ('jquery'), '', true);
 	/*test-file-js*/
-	wp_enqueue_script( 'test-js' , get_template_directory_uri() . '/js/test.js');
+	// wp_enqueue_script( 'test-js' , get_template_directory_uri() . '/js/test.js', array ('jquery'), '', true);
 	/* API Яндекс карты */ 
 	wp_enqueue_script( 'api-maps' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
 	/*modernizr.js*/

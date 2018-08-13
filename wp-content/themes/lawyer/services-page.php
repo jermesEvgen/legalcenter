@@ -40,8 +40,7 @@ get_header('tip'); ?>
 
 </section>
 
-
-<!-- 
+ <!-- 
   ========================
     ** section contact-form **
   ======================== 
@@ -49,7 +48,7 @@ get_header('tip'); ?>
 
 
   <!-- Форма обратной связи  -->
-  <section class="ctaMain" id="ctaForm">
+  <section class="ctaMain" id="ctaForm" >
   
     <h2>Свяжитесь с нами</h2>
     <h6>Мы ответим на все интересующие Вас вопросы и вы получите консультацию абсолютно бесплатно</h6>
@@ -62,11 +61,11 @@ get_header('tip'); ?>
                      <div class="ctaFormTab__img">
 
                         <!-- Телефон трубка -->
-                        <svg class="iconSvg iconSvg__firstSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                           
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="1.5225" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#fff" stroke-width="1.5225" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
                             M47.617,38.784c-1.69-1.484-3.658-2.703-5.629-3.815c-2.215-1.247-4.535-1.512-6.684,0.314c-0.137,0.117-0.322,0.178-0.471,0.287
                             c-0.944,0.689-1.777,0.64-2.624-0.234c-2.43-2.508-4.934-4.946-7.336-7.478c-1.538-1.621-1.553-1.877-0.182-3.665
                             c1.591-2.071,1.713-4.267,0.453-6.39c-1.228-2.072-2.731-3.997-4.239-5.885c-0.867-1.083-2.167-1.499-3.576-1.362
@@ -87,7 +86,7 @@ get_header('tip'); ?>
                 <div class="ctaFormTab__item">
                      <div class="ctaFormTab__img">
                         <!-- Календарь -->
-                        <svg class="iconSvg"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg "  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                           
@@ -180,15 +179,11 @@ get_header('tip'); ?>
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__first' )) ; ?>
             <?php } ?>
 
-             
-
               <!-- Запишитесь на консультацию  -->              
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__second')){ ?>
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__second' )) ; ?>
             <?php } ?>
-
-             
 
               <!-- Юристы вам помогут -->
               <!-- Выводим  форму  -->
@@ -197,16 +192,17 @@ get_header('tip'); ?>
             <?php } ?>
 
 
+
           </div>
         </div><!-- //ctaMainForm -->
-        <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
-          <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
-               обработкой персональных данных
-            </a>
-        </p>
+  
+    <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+      <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
+           обработкой персональных данных
+        </a>
+    </p>
     </div>
   </section>
 
-	
 
 <?php get_footer();
