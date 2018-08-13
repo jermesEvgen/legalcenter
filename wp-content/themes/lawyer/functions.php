@@ -84,8 +84,8 @@ function lawyer_style() {
 	/*font-awesome*/
 	// wp_enqueue_style( 'font-awesome' , 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' ); 
      /*Datepicker css */
-	wp_enqueue_style( 'datapiker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/css/bootstrap.min.css'); 
-	wp_enqueue_style( 'datetimepicker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/css/bootstrap-datetimepicker.min.css'); 
+	// wp_enqueue_style( 'datapiker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/css/bootstrap.min.css'); 
+	// wp_enqueue_style( 'datetimepicker' , get_template_directory_uri() . '/src/libs/datapiker/bootstrap/css/bootstrap-datetimepicker.min.css'); 
 	/*Owlcarousel*/
 	// wp_enqueue_style( 'Owlcarousel' , get_template_directory_uri() . '/src/libs/owlcarousel/dist/assets/owl.carousel.min.css'); 
 	// wp_enqueue_style( 'owl.theme' , get_template_directory_uri() . '/src/libs/owlcarousel/dist/assets/owl.theme.default.min.css'); 

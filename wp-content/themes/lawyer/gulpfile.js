@@ -14,13 +14,13 @@ var gulp          = require('gulp'),
 gulp.task('css', function(){
 	return gulp.src([
 		'https://use.fontawesome.com/releases/v5.0.6/css/all.css',
-		// 'src/libs/datapiker/bootstrap/css/bootstrap.min.css',
-		// 'src/libs/datapiker/bootstrap/css/bootstrap-datetimepicker.min.css',
-		'./src/libs/owlcarousel/dist/assets/owl.carousel.min.css',
-		'./src/libs/owlcarousel/dist/assets/owl.theme.default.min.css',
-		'./src/css/main-style.css',
-		'./src/css/custom-css.css',
-		'./src/css/media.css'
+		'src/libs/datapiker/bootstrap/css/bootstrap.min.css',
+		'src/libs/datapiker/bootstrap/css/bootstrap-datetimepicker.min.css',
+		'src/libs/owlcarousel/dist/assets/owl.carousel.min.css',
+		'src/libs/owlcarousel/dist/assets/owl.theme.default.min.css',
+		'src/css/custom-css.css',
+		'src/css/media.css',
+		'src/css/main-style.css'
 		])
 	.pipe(concatCss('bundle.css'))
 	.pipe(prefix(' last 15 version'))
