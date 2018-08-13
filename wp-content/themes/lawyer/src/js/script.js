@@ -317,35 +317,21 @@ jQuery(document).ready(function(){
                 
        } else {
        jQuery('.headerMain__logo').hide();  
-       // jQuery('.menu ul li a').css('color','#304368');
-
-
          jQuery(window).scroll(function(){
          
              if(jQuery(this).scrollTop()>100){
               jQuery('.headerMain').css('background-color','#fff');
               jQuery('.hamburger-title').addClass('js-hamburger-title__scroll');
               jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoScroll2.png">');
-              // jQuery('.menu ul li a').css('color','#2D476A');
-              // jQuery('.headerMain__btn').addClass('js-headerMain__btn');
               jQuery('.hamburger').addClass('hamburger__scroll');
               jQuery('.header_phone').addClass('js-header-phone');
-
-
-              // event.preventDefault();
             }
              else if (jQuery(this).scrollTop()<100){
-              // jQuery('.hamburger').removeClass('hamburger__scroll');
               jQuery('.hamburger-title').removeClass('js-hamburger-title__scroll');
-
               jQuery('.headerMain').css('background-color','transparent');
               jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoHeader2.png">');
-              // jQuery('.menu ul li a').css('color','#304368');
-              // jQuery('.headerMain__btn').removeClass('js-headerMain__btn');
               jQuery('.hamburger').removeClass('hamburger__scroll');
               jQuery('.header_phone').removeClass('js-header-phone');
-
-              // event.preventDefault();
 
             }
 
@@ -360,8 +346,14 @@ jQuery(document).ready(function(){
 
 });
 
+/*---------------------------
 
-//  Добавить <br> в спанах в footer 
+
+  Добавить <br> в span в footer 
+
+
+
+----------------------------*/
 jQuery(document).ready(function(){
 
    var handleMatchMedia = function(mediaQuery) {
@@ -476,58 +468,67 @@ jQuery(document).ready(function(){
 
 /* Яндекс карта*/
 
-ymaps.ready(function () {
-var myMap = new ymaps.Map('map', {
-center: [64.532286, 40.523189],
-zoom: 15
-}, {
-searchControlProvider: 'yandex#search'
-}),
+jQuery(document).ready(function(){
 
-// Создаём макет содержимого.
-MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-),
 
-myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-hintContent: '163000, набережная Северной Двины, 71/1 оф. 215 ',
-balloonContent: '163000, набережная Северной Двины, 71/1 оф. 215 '
-}, {
-// Опции.
-// Необходимо указать данный тип макета.
-iconLayout: 'default#image',
-// Своё изображение иконки метки.
-iconImageHref: 'http://lawyer.io/wp-content/uploads/2018/04/pin.png',
-// Размеры метки.
-iconImageSize: [80, 60],
-// Смещение левого верхнего угла иконки относительно
-// её "ножки" (точки привязки).
-iconImageOffset: [-5, -38]
-}),
+  /* Яндекс карта*/
 
-myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-hintContent: 'Собственный значок метки с контентом',
-balloonContent: 'Тут название',
-iconContent: '12'
-}, {
-// Опции.
-// Необходимо указать данный тип макета.
-iconLayout: 'default#imageWithContent',
-// Своё изображение иконки метки.
-iconImageHref: 'http://lawyer.io/uploads/2018/04/pin.png',
-// Размеры метки.
-iconImageSize: [50, 100],
-// Смещение левого верхнего угла иконки относительно
-// её "ножки" (точки привязки).
-iconImageOffset: [-24, -24],
-// Смещение слоя с содержимым относительно слоя с картинкой.
-iconContentOffset: [15, 15],
-// Макет содержимого.
-iconContentLayout: MyIconContentLayout
+  ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+  center: [64.532286, 40.523189],
+  zoom: 15
+  }, {
+  searchControlProvider: 'yandex#search'
+  }),
+
+  // Создаём макет содержимого.
+  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  ),
+
+  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  hintContent: '163000, набережная Северной Двины, 71/1 оф. 215 ',
+  balloonContent: '163000, набережная Северной Двины, 71/1 оф. 215 '
+  }, {
+  // Опции.
+  // Необходимо указать данный тип макета.
+  iconLayout: 'default#image',
+  // Своё изображение иконки метки.
+  iconImageHref: 'http://lawyer.io/wp-content/uploads/2018/04/pin.png',
+  // Размеры метки.
+  iconImageSize: [80, 60],
+  // Смещение левого верхнего угла иконки относительно
+  // её "ножки" (точки привязки).
+  iconImageOffset: [-5, -38]
+  }),
+
+  myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+  hintContent: 'Собственный значок метки с контентом',
+  balloonContent: 'Тут название',
+  iconContent: '12'
+  }, {
+  // Опции.
+  // Необходимо указать данный тип макета.
+  iconLayout: 'default#imageWithContent',
+  // Своё изображение иконки метки.
+  iconImageHref: 'http://lawyer.io/uploads/2018/04/pin.png',
+  // Размеры метки.
+  iconImageSize: [50, 100],
+  // Смещение левого верхнего угла иконки относительно
+  // её "ножки" (точки привязки).
+  iconImageOffset: [-24, -24],
+  // Смещение слоя с содержимым относительно слоя с картинкой.
+  iconContentOffset: [15, 15],
+  // Макет содержимого.
+  iconContentLayout: MyIconContentLayout
+  });
+
+  myMap.geoObjects
+  .add(myPlacemark)
+  .add(myPlacemarkWithContent);
+  });
+
+
+
+
 });
-
-myMap.geoObjects
-.add(myPlacemark)
-.add(myPlacemarkWithContent);
-});
-
