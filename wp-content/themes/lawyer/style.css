@@ -41,6 +41,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-image: url(img/profit-img-bg6.png)!important;
 }
 
+
+
+html.js .loader_inner {
+	background-image: url("img/preloader.gif")!important;
+}
+
 .menu-image-title {
 	height: 110px;
 	line-height: 1.4;

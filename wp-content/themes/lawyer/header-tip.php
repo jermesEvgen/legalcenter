@@ -8,7 +8,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> onload="ShowPositon(64.532286, 40.523189)">
-
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
 
 <div id="page" class="site">
 	<a style="display: none;" class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lawyer' ); ?></a>

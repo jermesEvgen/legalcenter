@@ -754,9 +754,6 @@ $bg_quote = ot_get_option('quote__bg');
   </section>
 
 
-<div class="loader">
-	<div class="loader_inner"></div>
-</div>
 
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
