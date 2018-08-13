@@ -19,7 +19,6 @@ gulp.task('css', function(){
 		'src/libs/owlcarousel/dist/assets/owl.carousel.min.css',
 		'src/libs/owlcarousel/dist/assets/owl.theme.default.min.css',
 		'src/css/custom-css.css',
-		'src/css/media.css',
 		'src/css/main-style.css'
 		])
 	.pipe(concatCss('bundle.css'))

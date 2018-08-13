@@ -144,7 +144,7 @@ $bg_quote = ot_get_option('quote__bg');
 			background-image:  url('<?php echo $bg_quote['background-image'] ?>');
 			background-size: cover;
 		    background-color: <?php echo $bg_quote['background-color'] ?>;
-		    background-position: top center;
+		    background-position: center center;
 		    background-repeat: no-repeat;
 		}
 

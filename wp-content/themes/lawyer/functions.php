@@ -96,13 +96,9 @@ function lawyer_style() {
 	// wp_enqueue_style( 'lawyer-media' , get_template_directory_uri() . '/src/css/media.css');
 	/* custom-css */
 	// wp_enqueue_style( 'lawyer-custom-css' , get_template_directory_uri() . '/src/css/custom-css.css'); 
-	
-    /*main-style.css*/
-	// wp_enqueue_style( 'main-style.css' , get_template_directory_uri() . '/src/css/main-style.css'); 
-	
 
    /*bundle.min.css*/
-	wp_enqueue_style( 'bundle.min.css' , get_template_directory_uri() . '/css/bundle.min.css'); 
+	wp_enqueue_style( 'bundle-min-css' , get_template_directory_uri() . '/css/bundle.min.css'); 
 	/* Главные стили*/
 	wp_enqueue_style( 'lawyer-style', get_stylesheet_uri() );
 

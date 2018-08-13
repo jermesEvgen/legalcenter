@@ -1,13 +1,13 @@
-// jQuery(function() {
+jQuery(function() {
 
 	// //SVG Fallback
-	// if(!Modernizr.svg) {
-	// 	jQuery("img[src*='svg']").attr("src", function() {
-	// 		return jQuery(this).attr("src").replace(".svg", ".png");
-	// 	});
-	// };
+	if(!Modernizr.svg) {
+		jQuery("img[src*='svg']").attr("src", function() {
+			return jQuery(this).attr("src").replace(".svg", ".png");
+		});
+	};
 
-	// jQuery("img, a").on("dragstart", function(event) { event.preventDefault(); });
+	jQuery("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
 
 
@@ -60,9 +60,6 @@ jQuery(document).ready(function(){
 
 
 }); 
-
-
-
 
      // Меню на главной странице 
 
