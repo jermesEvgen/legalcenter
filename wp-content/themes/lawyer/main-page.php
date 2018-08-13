@@ -57,7 +57,8 @@ $bg_headerWrapper = ot_get_option('header__bg');
 
         <div class="btnHeader_posit">
 		   <a href="#ctaForm" class="btnHeader  smoothscroll">
-		   	   Получить бесплатную консультацию
+		   	   <!-- Получить бесплатную консультацию -->
+		   	   <?php pll_e('header-btn' ); ?>
 		   </a>
 
         </div>
@@ -241,7 +242,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
-					<h5> <span>3000</span><br> судебных заседаний</h5>
+					<h5> <span>3000</span><br><?php pll_e('profit-sub-title-1' ); ?></h5>
 					<?php if (ot_get_option( 'profit__title_1' )) {?>
 					     <?php echo ot_get_option( 'profit__title_1' ); ?>
 					<?php } ?>	
@@ -256,7 +257,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
-					<h5><span>95%</span> <br> выигранных дел</h5>
+					<h5><span>95%</span> <br> <?php pll_e('profit-sub-title-2' ); ?></h5>
 					<?php if (ot_get_option( 'profit__title_2' )) {?>
 					     <?php echo ot_get_option( 'profit__title_2' ); ?>
 					<?php } ?>	
@@ -272,7 +273,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
-					<h5><span>500</span><br> млн рублей взыскано в пользу клиентов</h5>
+					<h5><span>500</span><br> <?php pll_e('profit-sub-title-3' ); ?></h5>
 					<?php if (ot_get_option( 'profit__title_3' )) {?>
 					     <?php echo ot_get_option( 'profit__title_3' ); ?>
 					<?php } ?>	
@@ -291,7 +292,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
-					<h5>С нами быстро, выгодно и надёжно</h5>
+					<h5><?php pll_e('profit-sub-title-4' ); ?></h5>
 					<?php if (ot_get_option( 'profit__title_4' )) {?>
 					     <?php echo ot_get_option( 'profit__title_4' ); ?>
 					<?php } ?>	
@@ -306,7 +307,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
-					<h5>Работаем с <br>2007 года</h5>
+					<h5> <br><?php pll_e('profit-sub-title-5' ); ?></h5>
 					<?php if (ot_get_option( 'profit__title_5' )) {?>
 					     <?php echo ot_get_option( 'profit__title_5' ); ?>
 					<?php } ?>	
@@ -321,7 +322,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<?php } ?>						
 				</div>
 				<div class="profitItem__title">
-					<h5>Работаем в  Москве, Архангельске, Санкт-Петербурге и Сочи </h5>
+					<h5><?php pll_e('profit-sub-title-6' ); ?> </h5>
 					<?php if (ot_get_option( 'profit__title_6' )) {?>
 					     <?php echo ot_get_option( 'profit__title_6' ); ?>
 					<?php } ?>	
@@ -450,7 +451,7 @@ $bg_quote = ot_get_option('quote__bg');
 
 
 <section class="aboutWwork">
-	<h2>Как мы работаем </h2>
+	<h2><?php pll_e('aboutWwork-section' ); ?> </h2>
     <div class="aboutWworkItem">
     	<div class="aboutWworkItem__arrow"></div>
     	<div class="aboutWworkItem__block">
@@ -466,7 +467,7 @@ $bg_quote = ot_get_option('quote__bg');
     			<!-- <div class="bg-abWork_numb_1"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
-    			<h5>Выслушиваем вас или приглашаем на встречу</h5>
+    			<h5><?php pll_e('aboutWwork-section__1' ); ?></h5>
     		</div>
     	</div>
 
@@ -483,7 +484,7 @@ $bg_quote = ot_get_option('quote__bg');
     			<!-- <div class="bg-abWork_numb_2"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
-    			<h5>Проводим правовой анализ вашего дела</h5>
+    			<h5><?php pll_e('aboutWwork-section__2' ); ?></h5>
     		</div>
     	</div>
 
@@ -500,7 +501,7 @@ $bg_quote = ot_get_option('quote__bg');
     			<!-- <div class="bg-abWork_numb_3"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
-    			<h5>Составляем необходимые документы</h5>
+    			<h5><?php pll_e('aboutWwork-section__3' ); ?></h5>
     		</div>
     	</div>
 
@@ -515,7 +516,7 @@ $bg_quote = ot_get_option('quote__bg');
     			<!-- <div class="bg-abWork_numb_4"></div> -->
     		</div>
     		<div class="aboutWworkItem__title">
-    			<h5>Защищаем вас в суде</h5>
+    			<h5><?php pll_e('aboutWwork-section__4' ); ?></h5>
     		</div>
     	</div>
     </div>	
@@ -599,8 +600,8 @@ $bg_quote = ot_get_option('quote__bg');
   <!-- Форма обратной связи  -->
   <section class="ctaMain" id="ctaForm" >
   
-    <h2>Свяжитесь с нами</h2>
-    <h6>Мы ответим на все интересующие Вас вопросы и вы получите консультацию абсолютно бесплатно</h6>
+    <h2> <?php pll_e('ctaForm-translate-title' ); ?> </h2>
+    <h6><?php pll_e('ctaForm-translate-subtitle' ); ?></h6>
     <div class="ctaMainWrapper">
         <div class="ctaMainForm">
             
@@ -629,7 +630,7 @@ $bg_quote = ot_get_option('quote__bg');
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Закажите бесплатную телефонную консультацию</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -662,7 +663,7 @@ $bg_quote = ot_get_option('quote__bg');
 						
                      </div>
 
-                     <span class="ctaFormTab__descr">Запишитесь на консультацию в удобное для вас время</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_2' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -717,7 +718,7 @@ $bg_quote = ot_get_option('quote__bg');
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Задайте вопрос нашим специалистам</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_3' ); ?></span>
                 </div>
             </div><!-- //ctaFormTab -->
 
@@ -727,13 +728,11 @@ $bg_quote = ot_get_option('quote__bg');
       			<?php if ( ot_get_option( 'feedbackForm__first')){ ?>
       		        <?php echo do_shortcode( ot_get_option( 'feedbackForm__first' )) ; ?>
       			<?php } ?>
-
               <!-- Запишитесь на консультацию  -->              
               <!-- Выводим  форму  -->
       			<?php if ( ot_get_option( 'feedbackForm__second')){ ?>
       		        <?php echo do_shortcode( ot_get_option( 'feedbackForm__second' )) ; ?>
       			<?php } ?>
-
               <!-- Юристы вам помогут -->
               <!-- Выводим  форму  -->
       			<?php if ( ot_get_option( 'feedbackForm__third')){ ?>

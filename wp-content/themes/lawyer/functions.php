@@ -120,7 +120,7 @@ function lawyer_scripts() {
 	/*bundle.min.js*/
 	wp_enqueue_script( 'bundle-js' , get_template_directory_uri() . '/js/bundle.min.js', array ('jquery'), '', true);
 	/*test-file-js*/
-	wp_enqueue_script( 'test-js' , get_template_directory_uri() . '/js/test.js', array ('jquery'), '', true);
+	// wp_enqueue_script( 'test-js' , get_template_directory_uri() . '/js/test.js', array ('jquery'), '', true);
 	/* API Яндекс карты */ 
 	wp_enqueue_script( 'api-maps' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
 	/*modernizr.js*/
@@ -233,3 +233,89 @@ function my_wp_default_styles($styles) {
 }
 add_action("wp_default_styles", "my_wp_default_styles");
 
+
+
+function register_strings() { 
+   pll_register_string('Меню', 'menu');
+   
+   pll_register_string('О Компании', 'menu-item-1');
+   pll_register_string('Услуги', 'menu-item-2');
+   pll_register_string('Кейсы', 'menu-item-3');
+   pll_register_string('Котакты', 'menu-item-4');
+   pll_register_string('Задать вопрос', 'menu-item-btn');
+   
+   pll_register_string('Кнопка', 'header-btn');
+
+   pll_register_string('Преимущества', 'profit-title');
+   pll_register_string('судебных заседаний', 'profit-sub-title-1');
+   pll_register_string('выигранных дел', 'profit-sub-title-2');
+   pll_register_string('млн рублей взыскано в пользу клиентов', 'profit-sub-title-3');
+   pll_register_string('С нами быстро, выгодно и надёжно', 'profit-sub-title-4');
+   pll_register_string('Работаем с 2007 года', 'profit-sub-title-5');
+   pll_register_string('Работаем в Москве, Архангельске, Санкт-Петербурге и Сочи ', 'profit-sub-title-6');
+   
+
+   pll_register_string('Как мы работаем ', 'aboutWwork-section');
+   pll_register_string('Выслушиваем вас или приглашаем на встречу ', 'aboutWwork-section__1');
+   pll_register_string('Проводим правовой анализ вашего дела ', 'aboutWwork-section__2');
+   pll_register_string('Составляем необходимые документы', 'aboutWwork-section__3');
+   pll_register_string('Защищаем вас в суде', 'aboutWwork-section__4');
+   
+
+
+   pll_register_string('Свяжитесь с нами', 'ctaForm-translate-title');
+   pll_register_string('Мы ответим на все интересующие Вас вопросы и вы получите консультацию абсолютно бесплатно', 'ctaForm-translate-subtitle');
+   pll_register_string('Закажите бесплатную телефонную консультацию', 'ctaForm-translate__tab-descrpt');
+   pll_register_string('Запишитесь на консультацию в удобное для вас время', 'ctaForm-translate__tab-descrpt_2');
+   pll_register_string('Задайте вопрос нашим специалистам', 'ctaForm-translate__tab-descrpt_3');
+
+
+   pll_register_string('Ваше имя', 'placeholder-name');
+} 
+add_action('init','register_strings'); 
+
+
+
+	/**
+	 * Show Polylang Languages with Custom Markup
+	 * @param  string $class Add custom class to the languages container
+	 * @return string        
+	 */
+
+// function rarus_polylang_languages( $class = '' ) {
+//   if ( ! function_exists( 'pll_the_languages' ) ) return;
+//   // Gets the pll_the_languages() raw code
+//   $languages = pll_the_languages( array(
+//     'display_names_as'       => 'slug',
+//     'hide_if_no_translation' => 1,
+//     'raw'                    => true
+//   ) ); 
+//   $output = '';
+//   // Checks if the $languages is not empty
+//   if ( ! empty( $languages ) ) {
+//     // Creates the $output variable with languages container
+//     $output = '<div class="languages' . ( $class ? ' ' . $class : '' ) . '">';
+//     // Runs the loop through all languages
+//     foreach ( $languages as $language ) {
+//       // Variables containing language data
+//       $id             = $language['id'];
+//       $slug           = $language['slug'];
+//       $url            = $language['url'];
+//       $current        = $language['current_lang'] ? ' languages__item--current' : '';
+//       $no_translation = $language['no_translation'];
+//       // Checks if the page has translation in this language
+//       if ( ! $no_translation ) {
+//         // Check if it's current language
+//         if ( $current ) {
+//           // Output the language in a <span> tag so it's not clickable
+//           $output .= "<span class=\"languages__item$current\">$slug</span>";
+//         } else {
+//           // Output the language in an anchor tag
+//           $output .= "<a href=\"$url\" class=\"languages__item$current\">$slug</a>";
+//         }
+//       }
+//     }
+//     $output .= '</div>';
+//   }
+//   return $output;
+// }

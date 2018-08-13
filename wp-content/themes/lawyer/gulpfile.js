@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
 	prefix        = require('gulp-autoprefixer'),
 	concat        = require('gulp-concat'),
   	uglify        = require('gulp-uglifyjs'),
+  	gulpUtil      = require('gulp-util'),
   	imagemin      = require('gulp-imagemin'),
   	pngquant      = require('imagemin-pngquant');
 
@@ -22,13 +23,13 @@ gulp.task('css', function(){
 		'src/css/main-style.css'
 		])
 	.pipe(concatCss('bundle.css'))
-	.pipe(prefix(' last 15 version'))
-	.pipe(cleanCSS(''))
+	.pipe(prefix('last 15 version'))
+	.pipe(cleanCSS())
 	.pipe(rename('bundle.min.css'))
-	.pipe(gulp.dest('./css'))
+	.pipe(gulp.dest('./css'));
 });
 
-// scripts-all 
+// scripts 
 gulp.task('scripts', function(){
 	 return gulp.src([
 	  'src/libs/mask/jquery.mask.js',
@@ -37,12 +38,10 @@ gulp.task('scripts', function(){
 	  'src/libs/datapiker/bootstrap/js/moment-with-locales.min.js',
 	  'src/libs/datapiker/bootstrap/js/bootstrap-datetimepicker.min.js',
 	  'src/js/script.js'
-
 	  ])
 	  .pipe(concat('bundle.min.js'))
-	  .pipe(uglify())
-	  .pipe(gulp.dest('js'));
-
+	  .pipe(uglify().on('error', gulpUtil.log)) // notice the error event here
+	  .pipe(gulp.dest('./js'));
 });
 
 //image-png
@@ -58,6 +57,5 @@ gulp.task('img',function(){
 	     svgoPlugins : [{removeViewBox: false}],
 	     une: [pngquant()]
 	    }))
-	    .pipe(gulp.dest('img'));
-	  
+	    .pipe(gulp.dest('img'))	  
 });	

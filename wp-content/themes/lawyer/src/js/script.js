@@ -1,5 +1,3 @@
-jQuery(function() {
-
 	// //SVG Fallback
 	if(!Modernizr.svg) {
 		jQuery("img[src*='svg']").attr("src", function() {
@@ -9,9 +7,6 @@ jQuery(function() {
 
 	jQuery("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
-
-
-
  //  Загрузка прелоадера 
 
 jQuery(window).load(function() {
@@ -154,7 +149,7 @@ jQuery(document).ready(function(){
          // если менее 768px или равное, то выполняется код между скобок  
 
          jQuery('.header__info_phn').hide();
-         jQuery('.btnHeader ').text('Бесплатная консультация');
+         // jQuery('.btnHeader ').text('Бесплатная консультация');
 
          jQuery(function(jQuery) {
 
@@ -176,7 +171,7 @@ jQuery(document).ready(function(){
          } else {
          // обратное условие, т.е если более 768px 
          jQuery('.header__info_phn').show();
-         jQuery('.btnHeader ').text('Получить бесплатную консультацию');
+         // jQuery('.btnHeader ').text('Получить бесплатную консультацию');
 
          jQuery(function(jQuery) {
 
@@ -200,9 +195,10 @@ jQuery(document).ready(function(){
      mql.addListener(handleMatchMedia); 
 
 
-/*
+/*-----------------
+
    Слайдер 
-*/
+------------------*/
 
     jQuery(document).ready(function(){
        jQuery('.slider-container .owl-carousel').owlCarousel({
@@ -212,7 +208,7 @@ jQuery(document).ready(function(){
            autoplaySpeed:1000,
            autoplayHoverPause:false,
            margin:20,
-           autoplay:true,
+           autoplay:false,
            responsive:{
                0:{
                    items:1
@@ -250,20 +246,18 @@ jQuery(document).ready(function(){
 
 });
 
-
-
 jQuery(document).ready(function(){
   jQuery('.headerLogo__scroll').hide();
 });
 
 
 
-/* ====
+/* --------------
 
 разрешение экранов <=992px  
 _____
 max-width: 992px
-======*/
+---------------------*/
 
 jQuery(document).ready(function(){
 
@@ -314,8 +308,6 @@ jQuery(document).ready(function(){
             }
 
          });
-
-
        }
    },
    mql = window.matchMedia('all and (max-width: 992px)');
@@ -433,24 +425,9 @@ jQuery(document).ready(function(){
 
 
 
-/*
-  Запускаем скроллер
-*/
-
-jQuery(document).ready(function(){
-  scroller.init();
-});
-   
-
-
-
 /* Яндекс карта*/
 
 jQuery(document).ready(function(){
-
-
-  /* Яндекс карта*/
-
   ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
   center: [64.532286, 40.523189],
@@ -505,10 +482,6 @@ jQuery(document).ready(function(){
   .add(myPlacemark)
   .add(myPlacemarkWithContent);
   });
-
-
-
-
 });
 
 
@@ -525,8 +498,19 @@ jQuery(document).ready(function(){
     }).eq(0).addClass("ctaFormTab__item-active");
 
   jQuery('.iconSvg:first').addClass("iconSvg__act");
+
+
+
+
 });  
 
 
 
 
+  /*-----------------------
+  
+   Удаляем ненужную обертку у блока 
+  
+  ---------------------------*/
+  // jQuery("div.casesItem").unwrap();
+  // jQuery("a.casesItem__btn").unwrap();

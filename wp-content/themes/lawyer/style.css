@@ -66,3 +66,41 @@ html.js .loader_inner {
 
 }
 
+
+
+/*  Polylang */
+
+.polylang {
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	list-style: none; 
+}
+.polylang li {
+	/*color: #fff;*/
+}
+.polylang li a span  {
+	color: #fff;	
+}
+
+/* Component: Languages */
+.languages__item {
+  text-transform: uppercase;
+  color: #899099;
+  font-size: 13px;
+  font-size:  1.3rem;
+  line-height: 1.15;
+}
+.languages__item--current {
+  color: #212121;
+}
+.languages__item:before {
+  content: ' / ';
+  color: #899099;
+}
+.languages__item:first-child:before {
+  content: '';
+}
+.languages a.languages__item:hover {
+  color: #212121;
+}
