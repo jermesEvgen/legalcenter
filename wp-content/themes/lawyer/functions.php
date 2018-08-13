@@ -120,7 +120,7 @@ function lawyer_scripts() {
 	/*bundle.min.js*/
 	wp_enqueue_script( 'bundle-js' , get_template_directory_uri() . '/js/bundle.min.js', array ('jquery'), '', true);
 	/*test-file-js*/
-	// wp_enqueue_script( 'test-js' , get_template_directory_uri() . '/js/test.js', array ('jquery'), '', true);
+	wp_enqueue_script( 'test-js' , get_template_directory_uri() . '/js/test.js', array ('jquery'), '', true);
 	/* API Яндекс карты */ 
 	wp_enqueue_script( 'api-maps' , 'http://api-maps.yandex.ru/2.1/?lang=ru_RU' , array ('jquery'), '', true); 
 	/*modernizr.js*/
