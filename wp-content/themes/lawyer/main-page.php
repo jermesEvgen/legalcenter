@@ -12,10 +12,6 @@ get_header(); ?>
 -->
 
 <style type="text/css">
-/*	.headerWrapper {
-		background: <?php echo $bg_headerWrapper['background-color'] ?> url('<?php echo $bg_headerWrapper['background-image'] ?>') <?php echo $bg_headerWrapper['background-position'] ?> <?php echo $bg_headerWrapper['background-repeat'] ?>;
-		background-size: <?php echo $bg_headerWrapper['background-size'] ?>;
-	}*/
 .headerWrapper {
 		background-image:  url('<?php echo $bg_headerWrapper['background-image'] ?>');
 		background-size: cover;
