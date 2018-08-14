@@ -10,10 +10,7 @@ get_header(); ?>
   ** section HEADER **
 ======================== 
 -->
-<?php
-$bg_headerWrapper = ot_get_option('header__bg');
-// var_dump($bg_headerWrapper);
-?>
+
 <style type="text/css">
 /*	.headerWrapper {
 		background: <?php echo $bg_headerWrapper['background-color'] ?> url('<?php echo $bg_headerWrapper['background-image'] ?>') <?php echo $bg_headerWrapper['background-position'] ?> <?php echo $bg_headerWrapper['background-repeat'] ?>;
@@ -27,8 +24,6 @@ $bg_headerWrapper = ot_get_option('header__bg');
 	    background-repeat: no-repeat;
 	}
 </style>
-
-
 <section class="headerWrapper" >
 	<aside >
 		<!-- Белый логотип  -->
