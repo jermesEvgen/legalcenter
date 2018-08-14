@@ -731,6 +731,7 @@ $bg_quote = ot_get_option('quote__bg');
               <!-- Запишитесь на консультацию  -->              
               <!-- Выводим  форму  -->
       			<?php if ( ot_get_option( 'feedbackForm__second')){ ?>
+      		       
       		        <?php echo do_shortcode( ot_get_option( 'feedbackForm__second' )) ; ?>
       			<?php } ?>
               <!-- Юристы вам помогут -->
