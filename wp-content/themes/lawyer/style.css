@@ -104,3 +104,9 @@ html.js .loader_inner {
 .languages a.languages__item:hover {
   color: #212121;
 }
+
+
+/* languages */
+.languages {
+	border: 1px solid red; 
+}

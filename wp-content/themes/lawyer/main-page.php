@@ -33,12 +33,11 @@ $bg_headerWrapper = ot_get_option('header__bg');
 	<aside >
 		<!-- Белый логотип  -->
 		<div class="logo__mobile" >
-			<!-- <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt=""> -->
+
 			<object
 			  type="image/svg+xml"
 			  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.svg">
-			  <img
-			    src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.png">
+			  <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.png">
 			</object>
 
 		</div>

@@ -20,7 +20,7 @@
                     				<?php } ?>
                     		</li>
                     		<li>
-                    			<span class="contactBlock__span">Время работы:</span>
+                    			<span class="contactBlock__span"><?php pll_e('time-work'); ?></span>
                     				<!-- Время работы  -->
                     				<?php if ( ot_get_option( 'footer__timework')){ ?>
                     			         <?php echo ot_get_option( 'footer__timework' ); ?>
@@ -35,7 +35,7 @@
                     	</ul>
                     	<ul>
                     		<li>
-                    			<span class="contactBlock__span">Городской: </span>
+                    			<span class="contactBlock__span"><?php pll_e('city-phone'); ?></span>
                     					<!-- Телефон городской  -->
                     				<?php if (ot_get_option( 'phone__city' )) {?>
                     							<a  href="callto:<?php echo str_replace( array( ' ', ')','(','-' ), '', ot_get_option( 'phone__city_link' ))?>" >
@@ -52,7 +52,7 @@
 
                     		</li>
                     		<li>
-                    			<span class="contactBlock__span">Мобильный:</span>
+                    			<span class="contactBlock__span"><?php pll_e('mobile-phone'); ?></span>
                     					<!-- Телефон мобильный  -->
                     				<?php if (ot_get_option( 'phone__mobile' )) {?>
                     							<a  href="callto:<?php echo str_replace( array( ' ', ')','(','-' ), '', ot_get_option( 'phone__mobile_link' ))?>" >
@@ -62,7 +62,7 @@
                     			
                     		</li>
                     		<li>
-                    			<span class="contactBlock__span">Факс:</span>
+                    			<span class="contactBlock__span"><?php pll_e('fax-phone'); ?></span>
                 				     <!-- Телефон- факс -->
                 			     	<?php if (ot_get_option( 'fax__city' )) {?>
                 			     				<a  href="callto:<?php echo str_replace( array( ' ', ')','(','-' ), '', ot_get_option( 'fax__city_link' ))?>" >

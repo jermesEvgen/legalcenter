@@ -126,6 +126,10 @@ function lawyer_scripts() {
 	/*modernizr.js*/
 	wp_enqueue_script( 'modernizr' , get_template_directory_uri() . '/src/libs/modernizr/modernizr.js' , array ('jquery'), ''); 
 
+	
+	/* customizer*/
+	wp_enqueue_script( 'customizer' , get_template_directory_uri() . '/src/js/customizer.js'); 
+
 	/* Подключаем jQuery*/
 	// wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/src/libs/jquery/jquery.min.js'); 
  
@@ -268,6 +272,13 @@ function register_strings() {
    pll_register_string('Закажите бесплатную телефонную консультацию', 'ctaForm-translate__tab-descrpt');
    pll_register_string('Запишитесь на консультацию в удобное для вас время', 'ctaForm-translate__tab-descrpt_2');
    pll_register_string('Задайте вопрос нашим специалистам', 'ctaForm-translate__tab-descrpt_3');
+   
+
+
+   pll_register_string('Время работы', 'time-work');
+   pll_register_string('Городской ', 'city-phone');
+   pll_register_string('Мобильный ', 'mobile-phone');
+   pll_register_string('Факс', 'fax-phone');
 
 
    pll_register_string('Ваше имя', 'placeholder-name');
