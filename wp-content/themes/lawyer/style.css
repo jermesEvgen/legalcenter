@@ -67,5 +67,17 @@ html.js .loader_inner {
 }
 
 .headerWrapper {
-	background-image: url(img/hP3zk9CweBI.jpg);
+	background-image: url(img/hP3zk9CweBI.jpg)!important;
 }
+
+/*.cases {
+	border: 1px solid red;
+	height: 90vh;
+}
+.casesItem {
+	height: 100%;
+}
+.slider-container {
+	border: 1px solid red;
+	height: 100%;
+}*/

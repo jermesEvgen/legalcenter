@@ -5,6 +5,10 @@
 get_header(); ?>
 
 
+<div class="loader">
+	<div class="loader_inner"></div>
+</div>
+
 <!-- 
 ========================
   ** section HEADER **

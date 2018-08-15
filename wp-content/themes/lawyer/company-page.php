@@ -12,6 +12,11 @@ get_header(); ?>
 ======================== 
 -->
 
+
+<div class="loader">
+  <div class="loader_inner"></div>
+</div>
+
 <?php
 $bg_quote = ot_get_option('quote__bg');
 // var_dump($bg_headerWrapper);

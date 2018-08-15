@@ -126,8 +126,8 @@ function lawyer_scripts() {
 	/*modernizr.js*/
 	wp_enqueue_script( 'modernizr' , get_template_directory_uri() . '/src/libs/modernizr/modernizr.js' , array ('jquery'), ''); 
 
-	/* Подключаем jQuery*/
-	// wp_enqueue_script( 'jquery' , get_template_directory_uri() . '/src/libs/jquery/jquery.min.js'); 
+	/* Подключаем customizer*/
+	wp_enqueue_script( 'customizer' , get_template_directory_uri() . '/src/js/customizer.js', array ('jquery'), '', true); 
  
 
 	/* Yandex map */ 

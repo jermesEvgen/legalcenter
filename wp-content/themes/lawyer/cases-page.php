@@ -5,6 +5,9 @@
 get_header('tip'); ?>
 
 
+<div class="loader">
+  <div class="loader_inner"></div>
+</div>
 
 
 <div class="menu_plank"></div>

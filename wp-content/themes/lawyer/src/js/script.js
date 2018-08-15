@@ -210,7 +210,7 @@ jQuery(document).ready(function(){
            nav:false,
            dots:true,
            autoplaySpeed:1000,
-           autoplayHoverPause:false,
+           autoplayHoverPause:true,
            margin:20,
            autoplay:true,
            responsive:{
@@ -472,7 +472,7 @@ jQuery(document).ready(function(){
   // Необходимо указать данный тип макета.
   iconLayout: 'default#image',
   // Своё изображение иконки метки.
-  iconImageHref: 'http://lawyer.io/wp-content/uploads/2018/04/pin.png',
+  iconImageHref: 'http://lawyer.io/wp-content/uploads/2018/08/pin.png',
   // Размеры метки.
   iconImageSize: [80, 60],
   // Смещение левого верхнего угла иконки относительно
