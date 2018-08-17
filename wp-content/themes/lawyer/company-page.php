@@ -127,8 +127,9 @@ $bg_quote = ot_get_option('quote__bg');
     <section class="companyInfo">
 
     	<div class="companyWrapper">
-        <div class="aboutContent__logo">
+        <div class="aboutContent__logo" >
           <object
+            id="logoRus3"
             type="image/svg+xml"
             data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgCompany.svg">
             <img

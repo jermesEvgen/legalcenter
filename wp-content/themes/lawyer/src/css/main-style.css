@@ -1355,9 +1355,13 @@ span.ctaFormTab__descr_mobile {
 .ctaFormTabs__items_input {
 	width: 50%;
 	max-width: 500px;
-	margin:0 auto;
-	display: flex;
-	justify-content: center; 
+	margin:1em auto;
+	/*display: flex;*/
+	/*justify-content: center; */
+}
+.ctaFormTabs__items_input label {
+	font-family: 'UbuntuLight';
+	font-weight: 100;
 }
 .ctaFormTabs__items_input input {
 	width: 100%;

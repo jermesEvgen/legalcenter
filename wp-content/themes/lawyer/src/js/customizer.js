@@ -14,6 +14,32 @@
 
 
 
-if (window.location.pathname === 'http://lawyer.io/en/'){
-console.log( 'Это англ версия');
-}
+// if ( document.location.href = "http://lawyer.io"){
+// console.log( 'Это англ версия');
+// }
+
+
+
+
+// var en = document.location.href;
+
+
+
+
+
+//   if ( en === "http://lawyer.io/en/"){
+//     console.log( 'Это англ версия');
+//     }else{
+
+//   }
+
+
+// var logotype = document.querySelector('.logo__mobile'); //Нашли элемент на странице
+// var newElem = document.createElement('img');
+// newElem.src="https://images.cdn1.stockunlimited.net/preview1300/lawyer-logo-element_1982955.jpg";
+// logotype.appendChild(newElem);
+
+// var logoen = document.createElement('img');
+// logoen.src ="https://images.cdn1.stockunlimited.net/preview1300/lawyer-logo-element_1982955.jpg";
+
+// logotype.appendChild(logoen);

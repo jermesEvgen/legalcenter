@@ -528,3 +528,82 @@ jQuery(document).ready(function(){
 });  
 
 
+
+
+
+
+/* -------------------------
+
+Русские элементы на странице 
+
+--------------------------*/
+
+var logoRus = document.querySelector('#logoRus'); //Нашли логотип на странице
+var logoRus2 = document.querySelector('#logoRus2'); //Нашли логотип на странице
+var rusForm = document.querySelector('.rusForm'); //Нашли логотип на странице
+logoRus.classList.add('version-hide');
+logoRus2.classList.add('version-hide');
+// rusForm.classList.add('version-hide');
+
+
+var logoRusBox = document.querySelector('.logo__mobile'); 
+var newElemlogoEn = document.createElement('img');
+newElemlogoEn.src="https://images.cdn1.stockunlimited.net/preview1300/lawyer-logo-element_1982955.jpg";
+logoRusBox.appendChild(newElemlogoEn);
+
+
+
+var logoRusBox2 = document.querySelector('.aboutContent__logo');
+var newElemlogoEn2 = document.createElement('img');
+newElemlogoEn2.src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/law-firm-logo.jpg";
+logoRusBox2.appendChild(newElemlogoEn2);
+
+
+
+// var logotype = document.querySelector('.logo__mobile'); //Нашли элемент на странице
+
+
+// var newElemlogoRus = document.createElement('img');
+// newElemlogoRus.src="https://images.cdn1.stockunlimited.net/preview1300/lawyer-logo-element_1982955.jpg";
+// logotype.appendChild(newElemlogoRus);
+
+
+
+// var newElemlogoRus2 = document.createElement('img');
+// newElemlogoRus2.src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/law-firm-logo.jpg";
+// logoRus2.appendChild(newElemlogoRus2);
+
+
+
+
+// var logoRus3 = document.querySelector('#logoRus3'); //Нашли логотип на странице
+
+
+
+
+
+// var engForms = document.querySelector('.englForm');
+// engForms.classList.add('version-hide');
+
+
+// logoRus.style.opacity ='0';
+
+
+
+
+
+       // function showHide(element_id) {
+       //     //Если элемент с id-шником element_id существует
+       //     if (document.getElementById(element_id)) { 
+       //         //Записываем ссылку на элемент в переменную obj
+       //         var obj = document.getElementById(element_id); 
+       //         //Если css-свойство display не block, то: 
+       //         if (obj.style.display != "block") { 
+       //             obj.style.display = "block"; //Показываем элемент
+       //         }
+       //         else obj.style.display = "none"; //Скрываем элемент
+       //     }
+       //     //Если элемент с id-шником element_id не найден, то выводим сообщение
+       //     else console.log("Элемент с id: " + element_id + " не найден!"); 
+       // };  
+

@@ -33,13 +33,14 @@ $bg_headerWrapper = ot_get_option('header__bg');
 	<aside >
 		<!-- Белый логотип  -->
 		<div class="logo__mobile" >
-
-			<object
-			  type="image/svg+xml"
-			  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.svg">
-			  <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.png">
-			</object>
-
+  
+	        <div id="logoRus" >
+				<object
+				  type="image/svg+xml"
+				  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.svg">
+				  <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.png">
+				</object>
+	        </div>
 		</div>
 		<?php if (ot_get_option( 'header__logo'  )) {?>
 			 <div class="header__logo" style="display: none;">
@@ -54,7 +55,7 @@ $bg_headerWrapper = ot_get_option('header__bg');
 		    <h3 ><?php echo ot_get_option( 'header__descr' ); ?></h3>
 		<?php } ?>
 
-        <div class="btnHeader_posit">
+        <div class="btnHeader_posit" >
 		   <a href="#ctaForm" class="btnHeader  smoothscroll">
 		   	   <!-- Получить бесплатную консультацию -->
 		   	   <?php pll_e('header-btn' ); ?>
@@ -160,17 +161,19 @@ $bg_quote = ot_get_option('quote__bg');
 
 		</div>
 		<div class="aboutContent">
-			<div class="aboutContent__logo">
+			<div class="aboutContent__logo" >
 <!--                 <?php if (ot_get_option( 'quote__logo' )) {?>
 				   <img src="<?php echo ot_get_option( 'quote__logo' ); ?>" alt="">			    
 				<?php } ?>	  -->
 
-				<object
-				  type="image/svg+xml"
-				  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.svg">
-				  <img
-				    src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.png">
-				</object>
+				<div id="logoRus2">
+					<object
+					  type="image/svg+xml"
+					  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.svg">
+					  <img
+					    src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.png">
+					</object>
+				</div>
 			</div>
 			<hr>
 			<!-- <div class="aboutCont_txt"> -->

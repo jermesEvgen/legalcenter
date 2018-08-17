@@ -110,3 +110,15 @@ html.js .loader_inner {
 .languages {
 	border: 1px solid red; 
 }
+
+
+/* Скрываем на английской версии руские блоки */
+.version-hide {
+	opacity: 0;
+	position: absolute;
+}
+
+/*#logoRus {
+	opacity: 0;
+	position: absolute;
+}*/
