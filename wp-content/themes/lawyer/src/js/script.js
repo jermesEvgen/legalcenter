@@ -154,7 +154,7 @@ jQuery(document).ready(function(){
          // если менее 768px или равное, то выполняется код между скобок  
 
          jQuery('.header__info_phn').hide();
-         jQuery('.btnHeader ').text('Бесплатная консультация');
+         // jQuery('.btnHeader ').text('Бесплатная консультация');
 
          jQuery(function(jQuery) {
 
@@ -176,7 +176,7 @@ jQuery(document).ready(function(){
          } else {
          // обратное условие, т.е если более 768px 
          jQuery('.header__info_phn').show();
-         jQuery('.btnHeader ').text('Получить бесплатную консультацию');
+         // jQuery('.btnHeader ').text('Получить бесплатную консультацию');
 
          jQuery(function(jQuery) {
 
@@ -280,12 +280,16 @@ jQuery(document).ready(function(){
                 jQuery('.hamburger').addClass('hamburger__scroll');
                 jQuery('.hamburger-title').addClass('js-hamburger-title__scroll');
 
+                jQuery('.languages li a').addClass('js-header-phone');
+
                 jQuery('.headerMain').css('background-color','#fff');
                 jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoScroll2.png">');
                 jQuery('.menu ul li a').css('color','#2D476A');
               }
                else if (jQuery(this).scrollTop()<100){
                 jQuery('.hamburger').removeClass('hamburger__scroll');
+                jQuery('.languages li a').css('color','#fff');
+
 
                 jQuery('.headerMain').css('background-color','transparent');
                 jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoHeader2.png">');
@@ -298,6 +302,7 @@ jQuery(document).ready(function(){
          jQuery(window).scroll(function(){
          
              if(jQuery(this).scrollTop()>100){
+              jQuery('.languages li a').addClass('js-header-phone');
               jQuery('.headerMain').css('background-color','#fff');
               jQuery('.hamburger-title').addClass('js-hamburger-title__scroll');
               jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoScroll2.png">');
@@ -305,6 +310,7 @@ jQuery(document).ready(function(){
               jQuery('.header_phone').addClass('js-header-phone');
             }
              else if (jQuery(this).scrollTop()<100){
+              jQuery('.languages li a').css('color','#fff');
               jQuery('.hamburger-title').removeClass('js-hamburger-title__scroll');
               jQuery('.headerMain').css('background-color','transparent');
               jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoHeader2.png">');
@@ -453,7 +459,7 @@ jQuery(document).ready(function(){
 
   ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
-  center: [64.532286, 40.523189],
+  center: [64.53265373063637, 40.5221968560669],
   zoom: 15
   }, {
   searchControlProvider: 'yandex#search'
@@ -480,7 +486,7 @@ jQuery(document).ready(function(){
   iconImageOffset: [-5, -38]
   }),
 
-  myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+  myPlacemarkWithContent = new ymaps.Placemark([64.53265373063637, 40.5221968560669], {
   hintContent: 'Собственный значок метки с контентом',
   balloonContent: 'Тут название',
   iconContent: '12'
@@ -538,25 +544,132 @@ jQuery(document).ready(function(){
 
 --------------------------*/
 
-var logoRus = document.querySelector('#logoRus'); //Нашли логотип на странице
-var logoRus2 = document.querySelector('#logoRus2'); //Нашли логотип на странице
-var rusForm = document.querySelector('.rusForm'); //Нашли логотип на странице
-logoRus.classList.add('version-hide');
-logoRus2.classList.add('version-hide');
-// rusForm.classList.add('version-hide');
-
-
-var logoRusBox = document.querySelector('.logo__mobile'); 
-var newElemlogoEn = document.createElement('img');
-newElemlogoEn.src="https://images.cdn1.stockunlimited.net/preview1300/lawyer-logo-element_1982955.jpg";
-logoRusBox.appendChild(newElemlogoEn);
+var en = document.location.href;
+var mainEn = "http://lawyer.io/en/";
+// var companyEn = "http://lawyer.io/en/about-company/";
+// var casesEn = "http://lawyer.io/en/cases/";
+// var contactEn = "http://lawyer.io/en/contact/";
 
 
 
-var logoRusBox2 = document.querySelector('.aboutContent__logo');
-var newElemlogoEn2 = document.createElement('img');
-newElemlogoEn2.src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/law-firm-logo.jpg";
-logoRusBox2.appendChild(newElemlogoEn2);
+addClasses = function (selector, classArray) {
+    'use strict';
+
+    var classList, className, element, elements, i, j, lengthI, lengthJ;
+
+    elements = document.querySelectorAll(selector);
+
+    // Loop through the elements
+    for (i = 0, lengthI = elements.length; i < lengthI; i += 1) {
+        element = elements[i];
+        classList = element.classList;
+
+        // Pass the array of classes as multiple arguments to classList::add
+        classList.add.apply(classList, classArray);
+    }
+};
+
+
+removeClasses = function (selector, classArray) {
+    'use strict';
+
+    var classList, className, element, elements, i, j, lengthI, lengthJ;
+
+    elements = document.querySelectorAll(selector);
+
+    // Loop through the elements
+    for (i = 0, lengthI = elements.length; i < lengthI; i += 1) {
+        element = elements[i];
+        classList = element.classList;
+
+        // Pass the array of classes as multiple arguments to classList::add
+        classList.remove.apply(classList, classArray);
+    }
+};
+
+
+
+
+
+
+  if (en.indexOf('/en/') > 0){
+     console.log( 'Это англ версия');
+     addClasses('.rusForm', ['version-hide']);
+     removeClasses('.enForm', ['version-hide']);
+    }else{
+     console.log( 'Это рус версия');
+     removeClasses('.rusForm', ['version-hide']);
+     addClasses('.enForm', ['version-hide']);
+  }
+  
+  // if ( en === companyEn){
+  //    console.log( 'Это англ версия');
+  //    addClasses('.rusForm', ['version-hide']);
+  //    removeClasses('.enForm', ['version-hide']);
+  //   }else{
+  //    console.log( 'Это рус версия');
+  //    removeClasses('.rusForm', ['version-hide']);
+  //    addClasses('.enForm', ['version-hide']);
+  // }
+
+  // if ( en === casesEn){
+  //    console.log( 'Это англ версия');
+  //    addClasses('.rusForm', ['version-hide']);
+  //    removeClasses('.enForm', ['version-hide']);
+  //   }else{
+  //    console.log( 'Это рус версия');
+  //    removeClasses('.rusForm', ['version-hide']);
+  //    addClasses('.enForm', ['version-hide']);
+  // }
+  
+  // if ( en === contactEn){
+  //    console.log( 'Это англ версия');
+  //    addClasses('.rusForm', ['version-hide']);
+  //    removeClasses('.enForm', ['version-hide']);
+  //   }else{
+  //    console.log( 'Это рус версия');
+  //    removeClasses('.rusForm', ['version-hide']);
+  //    addClasses('.enForm', ['version-hide']);
+  // }
+  
+
+
+
+    // var logoRus = document.querySelector('#logoRus'); //Нашли логотип на странице
+    // var logoRus2 = document.querySelector('#logoRus2'); //Нашли логотип на странице
+    // var rusForm = document.querySelector('.rusForm'); //Нашли логотип на странице
+    // logoRus.classList.add('version-hide');
+    // logoRus2.classList.add('version-hide');
+
+
+    // var logoRusBox = document.querySelector('.logo__mobile'); 
+    // var newElemlogoEn = document.createElement('img');
+    // newElemlogoEn.src="https://images.cdn1.stockunlimited.net/preview1300/lawyer-logo-element_1982955.jpg";
+    // logoRusBox.appendChild(newElemlogoEn);
+
+    // var logoRusBox2 = document.querySelector('.aboutContent__logo');
+    // var newElemlogoEn2 = document.createElement('img');
+    // newElemlogoEn2.src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/law-firm-logo.jpg";
+    // logoRusBox2.appendChild(newElemlogoEn2);
+
+
+    // var nameRus = document.querySelectorAll('.name-rus');
+    // nameRus.textContent = "Your name";
+    // var phoneRus = document.querySelectorAll('.phone-rus');
+    // phoneRus.textContent = "Your number";
+    // var messageRus = document.querySelectorAll('.message-rus');
+    // messageRus.textContent = "Your message";
+    // var dateTimeRus = document.querySelectorAll('.dataTime-rus');
+    // dateTimeRus.textContent = "Date & Time";
+
+
+    // var submitRus = document.querySelectorAll('.submit-rus');
+    // submitRus.textContent = "Sent";
+
+  //   }else{
+
+  // }
+
 
 
 

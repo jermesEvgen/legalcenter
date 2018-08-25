@@ -82,8 +82,22 @@ function custom_meta_boxes() {
                      'type'        => 'text',
                    ),
                  array(
+                     'id'          => 'servicesHeader__title_en',
+                     'label'       =>'Напишите заголовок на англ.яз',
+                     'desc'        => '',
+                     'std'         => '',
+                     'type'        => 'text',
+                   ),
+                 array(
                      'id'          => 'servicesHeader__subtitle',
                      'label'       =>'Краткое описание',
+                     'desc'        => '',
+                     'std'         => '',
+                     'type'        => 'text',
+                   ),
+                 array(
+                     'id'          => 'servicesHeader__subtitle_en',
+                     'label'       =>'Краткое описание на англ.яз',
                      'desc'        => '',
                      'std'         => '',
                      'type'        => 'text',

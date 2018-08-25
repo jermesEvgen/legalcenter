@@ -29,6 +29,8 @@ get_header(); ?>
   ** section Services Header **
 ======================== 
 -->
+ 
+
 
 
 
@@ -39,8 +41,11 @@ if ($servHeader__box && (get_post_meta($post->ID, 'servHeader__show', true ) !='
 foreach ($servHeader__box as $servHeader) :
 	$servHeader__bg = $servHeader['servHeader__bg'] ? $servHeader['servHeader__bg'] : '';
 	$servHeader__img = $servHeader['servHeader__upload'] ? $servHeader['servHeader__upload'] : '';
-	$servHeader__tite = $servHeader['servicesHeader__title'] ? $servHeader['servicesHeader__title'] : '';
-	$servHeader__subtite = $servHeader['servicesHeader__subtitle'] ? $servHeader['servicesHeader__subtitle'] : '';
+  $servHeader__tite_en = $servHeader['servicesHeader__title_en'] ? $servHeader['servicesHeader__title_en'] : '';
+	$servHeader__subtite_en = $servHeader['servicesHeader__subtitle_en'] ? $servHeader['servicesHeader__subtitle_en'] : '';
+  $servHeader__tite = $servHeader['servicesHeader__title'] ? $servHeader['servicesHeader__title'] : '';
+  $servHeader__subtite = $servHeader['servicesHeader__subtitle'] ? $servHeader['servicesHeader__subtitle'] : '';
+  
 ?>
 
 
@@ -57,15 +62,18 @@ foreach ($servHeader__box as $servHeader) :
 </style>
 
 
-<div class="offerBlock">
+<div class="offerBlock" >
   <div class="offerBlock__wrapper_inner">
 
   	<div class="offerBlock__wrapper">
   		<div class="offerBlock__title">
 
   			<img src="<?php echo $servHeader__img; ?> " alt="">
-  			<h1><?php echo $servHeader__tite; ?> </h1>
-  			<h5><?php echo $servHeader__subtite; ?></h5>
+        <h1 class="enForm"><?php echo $servHeader__tite_en; ?> </h1>
+        <h5 class="enForm"><?php echo $servHeader__subtite_en; ?></h5>
+
+  			<h1 class="rusForm"><?php echo $servHeader__tite; ?> </h1>
+  			<h5 class="rusForm"><?php echo $servHeader__subtite; ?></h5>
 
   		</div>
   	</div>
@@ -81,6 +89,26 @@ endforeach;
 <?php 
 endif 
 ?>
+
+
+
+
+  <div class="offerBlock" style="display: none;">
+    <div class="offerBlock__wrapper_inner">
+
+      <div class="offerBlock__wrapper">
+        <div class="offerBlock__title">
+          <img src="<?php echo get_post_meta( get_the_ID(), 'offerBlock__fields-logoImg', true ) ?>" alt="">
+           <h1><?php echo get_post_meta( get_the_ID(), 'offerBlock__fields-title', true ) ?></h1>
+           <h5><?php echo get_post_meta( get_the_ID(), 'offerBlock__fields-subtitle', true ) ?></h5>
+        </div>
+      </div>
+
+
+     </div>
+  </div>
+
+
 
 
 <!-- 
@@ -208,12 +236,12 @@ endif
 
 
     </ul>
-    <a href="<?php echo get_template_directory_uri() ?>/documents/price.pdf" target="_blank" class="priceAll priceAll_pos"> Смотреть полный прайс</a>
+    <a href="<?php echo get_template_directory_uri() ?>/documents/price.pdf" target="_blank" class="priceAll priceAll_pos"> <?php pll_e('price' ); ?></a>
 
     <a href="<?php echo get_template_directory_uri() ?>/documents/price.pdf" target="_blank" >
       <div class="tablica__price_mobile">
           <img  src="http://legalcenter.pro/wp-content/uploads/2018/03/icon-pdf.png" alt="">
-          <span class="tablica__price_mobile btn"> Смотреть прайс</span>
+          <span class="tablica__price_mobile btn"><?php pll_e('price-mob' ); ?> </span>
       </div>
     </a>
 
@@ -330,8 +358,7 @@ endif
 </section>
 
 
-
- <!-- 
+  <!-- 
   ========================
     ** section contact-form **
   ======================== 
@@ -339,10 +366,10 @@ endif
 
 
   <!-- Форма обратной связи  -->
-  <section class="ctaMain" id="ctaForm">
+  <section class="ctaMain" id="ctaForm" >
   
-    <h2>Свяжитесь с нами</h2>
-    <h6>Мы ответим на все интересующие Вас вопросы и вы получите консультацию абсолютно бесплатно</h6>
+    <h2> <?php pll_e('ctaForm-translate-title' ); ?> </h2>
+    <h6><?php pll_e('ctaForm-translate-subtitle' ); ?></h6>
     <div class="ctaMainWrapper">
         <div class="ctaMainForm">
             
@@ -352,11 +379,11 @@ endif
                      <div class="ctaFormTab__img">
 
                         <!-- Телефон трубка -->
-                        <svg class="iconSvg iconSvg__firstSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                           
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="1.5225" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#fff" stroke-width="1.5225" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
                             M47.617,38.784c-1.69-1.484-3.658-2.703-5.629-3.815c-2.215-1.247-4.535-1.512-6.684,0.314c-0.137,0.117-0.322,0.178-0.471,0.287
                             c-0.944,0.689-1.777,0.64-2.624-0.234c-2.43-2.508-4.934-4.946-7.336-7.478c-1.538-1.621-1.553-1.877-0.182-3.665
                             c1.591-2.071,1.713-4.267,0.453-6.39c-1.228-2.072-2.731-3.997-4.239-5.885c-0.867-1.083-2.167-1.499-3.576-1.362
@@ -371,13 +398,13 @@ endif
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Закажите бесплатную телефонную консультацию</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
                      <div class="ctaFormTab__img">
                         <!-- Календарь -->
-                        <svg class="iconSvg"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="iconSvg "  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
                         <g>
                           
@@ -404,7 +431,7 @@ endif
             
                      </div>
 
-                     <span class="ctaFormTab__descr">Запишитесь на консультацию в удобное для вас время</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_2' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -459,7 +486,7 @@ endif
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Задайте вопрос нашим специалистам</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_3' ); ?></span>
                 </div>
             </div><!-- //ctaFormTab -->
 
@@ -469,17 +496,12 @@ endif
             <?php if ( ot_get_option( 'feedbackForm__first')){ ?>
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__first' )) ; ?>
             <?php } ?>
-
-             
-
               <!-- Запишитесь на консультацию  -->              
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__second')){ ?>
+                 
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__second' )) ; ?>
             <?php } ?>
-
-             
-
               <!-- Юристы вам помогут -->
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__third')){ ?>
@@ -487,18 +509,17 @@ endif
             <?php } ?>
 
 
+
           </div>
         </div><!-- //ctaMainForm -->
-
-        <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
-            <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
-               обработкой персональных данных
-            </a>
-        </p>
+  
+    <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+      <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
+           обработкой персональных данных
+        </a>
+    </p>
     </div>
-
   </section>
-
 
 <!-- 
 ========================

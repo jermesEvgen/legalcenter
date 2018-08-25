@@ -264,6 +264,11 @@ function register_strings() {
    pll_register_string('Проводим правовой анализ вашего дела ', 'aboutWwork-section__2');
    pll_register_string('Составляем необходимые документы', 'aboutWwork-section__3');
    pll_register_string('Защищаем вас в суде', 'aboutWwork-section__4');
+
+   pll_register_string('Преимущества', 'profit-title');
+   
+   pll_register_string('Смотреть полный прайс ', 'price');
+   pll_register_string('Смотреть прайс ', 'price-mob');
    
 
 
@@ -281,7 +286,9 @@ function register_strings() {
    pll_register_string('Факс', 'fax-phone');
 
 
-   pll_register_string('Ваше имя', 'placeholder-name');
+   pll_register_string('Политика конфиденциальности', 'privPolicy-lng');
+   pll_register_string('Ссылка на скачивание', 'privPolicy-link-lng');
+ 
 } 
 add_action('init','register_strings'); 
 

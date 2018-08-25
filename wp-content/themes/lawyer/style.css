@@ -106,19 +106,51 @@ html.js .loader_inner {
 }
 
 
+
+.headerMain__top_cta {
+	/*border: 1px solid red;*/
+}
+
+@media only screen and (max-width : 480px) {
+.headerMain__top_cta {
+
+	/*flex-direction: column-reverse;*/
+}
+
+.header_phone {
+	display: none!important; 
+}
+}
+
 /* languages */
 .languages {
-	border: 1px solid red; 
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 0 1em;
+	color: #fff;
+}
+.languages li {
+	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
+	/*border: 1px solid red; */
+}
+.languages li a {
+	color: #fff;
 }
 
 
 /* Скрываем на английской версии руские блоки */
 .version-hide {
-	opacity: 0;
-	position: absolute;
+	display: none;
+}
+.menu-service-menu-english-container {
+	width: 100%;
+}
+ul.services__item {
+	/*border: 2px solid red;*/
+	width: 100%;
 }
 
-/*#logoRus {
-	opacity: 0;
-	position: absolute;
-}*/
+
+/*.rusForm {display: none;}*/

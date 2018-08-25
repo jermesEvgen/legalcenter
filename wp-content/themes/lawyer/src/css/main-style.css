@@ -251,8 +251,13 @@ header {
 
 /* Типовое меню */
 
-#header__tip .header_phone {
+#header__tip .header_phone,
+#header__tip .languages li a {
 	color: #314368;
+}
+
+#header__tip .languages li a {
+color: #314368!important;	
 }
 
 .menu ul li a.headerMain__btn {
@@ -398,7 +403,7 @@ aside {
 	.hamburger, .hamburger:before, .hamburger:after  {
 		position: absolute;
 		left: 50%;
-		margin-left: -18px;
+		margin-left: -17.5px;
 		top: 13%;
 	    display: block;
 	    height: 4px;
@@ -410,12 +415,12 @@ aside {
 	.hamburger:before {
 		transition: all 0.2s;
 		content: '';
-		margin-top: -12px;
+		margin-top: -10px;
 	}
 	.hamburger:after {
 		transition: all 0.2s;
 		content: '';
-		margin-top: 10px;
+		margin-top: 12px;
 	}
 
 	.hamburger_fixed {

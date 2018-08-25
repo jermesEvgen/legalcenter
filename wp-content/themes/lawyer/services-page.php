@@ -40,7 +40,7 @@ get_header('tip'); ?>
 
 </section>
 
- <!-- 
+<!-- 
   ========================
     ** section contact-form **
   ======================== 
@@ -50,8 +50,8 @@ get_header('tip'); ?>
   <!-- Форма обратной связи  -->
   <section class="ctaMain" id="ctaForm" >
   
-    <h2>Свяжитесь с нами</h2>
-    <h6>Мы ответим на все интересующие Вас вопросы и вы получите консультацию абсолютно бесплатно</h6>
+    <h2> <?php pll_e('ctaForm-translate-title' ); ?> </h2>
+    <h6><?php pll_e('ctaForm-translate-subtitle' ); ?></h6>
     <div class="ctaMainWrapper">
         <div class="ctaMainForm">
             
@@ -80,7 +80,7 @@ get_header('tip'); ?>
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Закажите бесплатную телефонную консультацию</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -113,7 +113,7 @@ get_header('tip'); ?>
             
                      </div>
 
-                     <span class="ctaFormTab__descr">Запишитесь на консультацию в удобное для вас время</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_2' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -168,7 +168,7 @@ get_header('tip'); ?>
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Задайте вопрос нашим специалистам</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_3' ); ?></span>
                 </div>
             </div><!-- //ctaFormTab -->
 
@@ -178,13 +178,12 @@ get_header('tip'); ?>
             <?php if ( ot_get_option( 'feedbackForm__first')){ ?>
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__first' )) ; ?>
             <?php } ?>
-
               <!-- Запишитесь на консультацию  -->              
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__second')){ ?>
+                 
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__second' )) ; ?>
             <?php } ?>
-
               <!-- Юристы вам помогут -->
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__third')){ ?>
@@ -196,13 +195,12 @@ get_header('tip'); ?>
           </div>
         </div><!-- //ctaMainForm -->
   
-    <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+    <p class="privacy-policy"><?php pll_e('privPolicy-lng'); ?> </br>
       <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
-           обработкой персональных данных
+           <?php pll_e('privPolicy-link-lng'); ?> 
         </a>
     </p>
     </div>
   </section>
-
 
 <?php get_footer();

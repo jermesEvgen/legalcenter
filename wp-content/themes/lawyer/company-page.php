@@ -149,16 +149,13 @@ $bg_quote = ot_get_option('quote__bg');
     </section>
 
     
+
 <!-- 
 ========================
   ** section PROFIT **
 ======================== 
 -->
 
-<!-- <?php
-$bg_profit = ot_get_option('profit__bg');
-var_dump($bg_headerWrapper);
-?> -->
 <style type="text/css">
   .profit {
     background: <?php echo $bg_profit['background-color'] ?> url('<?php echo $bg_profit['background-image'] ?>') <?php echo $bg_profit['background-position'] ?> <?php echo $bg_profit['background-repeat'] ?>;
@@ -178,6 +175,7 @@ var_dump($bg_headerWrapper);
   <?php if (ot_get_option( 'profit__title' )) {?>
        <h2><?php echo ot_get_option( 'profit__title' ); ?></h2>
   <?php } ?>  
+  <!-- <h2><?php pll_e('profit' ); ?></h2> -->
   <div class="profitWrapp">
     
     <div class="profitWrapp__firstLine">
@@ -190,7 +188,7 @@ var_dump($bg_headerWrapper);
           <?php } ?>            
         </div>
         <div class="profitItem__title">
-          <h5> <span>3000</span><br> судебных заседаний</h5>
+          <h5> <span>3000</span><br><?php pll_e('profit-sub-title-1' ); ?></h5>
           <?php if (ot_get_option( 'profit__title_1' )) {?>
                <?php echo ot_get_option( 'profit__title_1' ); ?>
           <?php } ?>  
@@ -205,7 +203,7 @@ var_dump($bg_headerWrapper);
           <?php } ?>            
         </div>
         <div class="profitItem__title">
-          <h5><span>95%</span> <br> выигранных дел</h5>
+          <h5><span>95%</span> <br> <?php pll_e('profit-sub-title-2' ); ?></h5>
           <?php if (ot_get_option( 'profit__title_2' )) {?>
                <?php echo ot_get_option( 'profit__title_2' ); ?>
           <?php } ?>  
@@ -221,7 +219,7 @@ var_dump($bg_headerWrapper);
           <?php } ?>            
         </div>
         <div class="profitItem__title">
-          <h5><span>500</span><br> млн рублей взыскано в пользу клиентов</h5>
+          <h5><span>500</span><br> <?php pll_e('profit-sub-title-3' ); ?></h5>
           <?php if (ot_get_option( 'profit__title_3' )) {?>
                <?php echo ot_get_option( 'profit__title_3' ); ?>
           <?php } ?>  
@@ -240,7 +238,7 @@ var_dump($bg_headerWrapper);
           <?php } ?>            
         </div>
         <div class="profitItem__title">
-          <h5>С нами быстро, выгодно и надёжно</h5>
+          <h5><?php pll_e('profit-sub-title-4' ); ?></h5>
           <?php if (ot_get_option( 'profit__title_4' )) {?>
                <?php echo ot_get_option( 'profit__title_4' ); ?>
           <?php } ?>  
@@ -255,7 +253,7 @@ var_dump($bg_headerWrapper);
           <?php } ?>            
         </div>
         <div class="profitItem__title">
-          <h5>Работаем с <br>2007 года</h5>
+          <h5> <br><?php pll_e('profit-sub-title-5' ); ?></h5>
           <?php if (ot_get_option( 'profit__title_5' )) {?>
                <?php echo ot_get_option( 'profit__title_5' ); ?>
           <?php } ?>  
@@ -270,7 +268,7 @@ var_dump($bg_headerWrapper);
           <?php } ?>            
         </div>
         <div class="profitItem__title">
-          <h5>Работаем в  Москве, Архангельске, Санкт-Петербурге и Сочи </h5>
+          <h5><?php pll_e('profit-sub-title-6' ); ?> </h5>
           <?php if (ot_get_option( 'profit__title_6' )) {?>
                <?php echo ot_get_option( 'profit__title_6' ); ?>
           <?php } ?>  
@@ -281,8 +279,7 @@ var_dump($bg_headerWrapper);
     
   </div>
 </section>
-    
- <!-- 
+<!-- 
   ========================
     ** section contact-form **
   ======================== 
@@ -292,8 +289,8 @@ var_dump($bg_headerWrapper);
   <!-- Форма обратной связи  -->
   <section class="ctaMain" id="ctaForm" >
   
-    <h2>Свяжитесь с нами</h2>
-    <h6>Мы ответим на все интересующие Вас вопросы и вы получите консультацию абсолютно бесплатно</h6>
+    <h2> <?php pll_e('ctaForm-translate-title' ); ?> </h2>
+    <h6><?php pll_e('ctaForm-translate-subtitle' ); ?></h6>
     <div class="ctaMainWrapper">
         <div class="ctaMainForm">
             
@@ -322,7 +319,7 @@ var_dump($bg_headerWrapper);
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Закажите бесплатную телефонную консультацию</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -355,7 +352,7 @@ var_dump($bg_headerWrapper);
             
                      </div>
 
-                     <span class="ctaFormTab__descr">Запишитесь на консультацию в удобное для вас время</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_2' ); ?></span>
                 </div>
 
                 <div class="ctaFormTab__item">
@@ -410,7 +407,7 @@ var_dump($bg_headerWrapper);
 
                      </div>
 
-                     <span class="ctaFormTab__descr">Задайте вопрос нашим специалистам</span>
+                     <span class="ctaFormTab__descr"><?php pll_e('ctaForm-translate__tab-descrpt_3' ); ?></span>
                 </div>
             </div><!-- //ctaFormTab -->
 
@@ -420,13 +417,12 @@ var_dump($bg_headerWrapper);
             <?php if ( ot_get_option( 'feedbackForm__first')){ ?>
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__first' )) ; ?>
             <?php } ?>
-
               <!-- Запишитесь на консультацию  -->              
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__second')){ ?>
+                 
                   <?php echo do_shortcode( ot_get_option( 'feedbackForm__second' )) ; ?>
             <?php } ?>
-
               <!-- Юристы вам помогут -->
               <!-- Выводим  форму  -->
             <?php if ( ot_get_option( 'feedbackForm__third')){ ?>
@@ -438,14 +434,13 @@ var_dump($bg_headerWrapper);
           </div>
         </div><!-- //ctaMainForm -->
   
-    <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+    <p class="privacy-policy"><?php pll_e('privPolicy-lng'); ?> </br>
       <a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
-           обработкой персональных данных
+           <?php pll_e('privPolicy-link-lng'); ?> 
         </a>
     </p>
     </div>
   </section>
-
 	
 
 <?php get_footer();

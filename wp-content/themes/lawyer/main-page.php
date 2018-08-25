@@ -38,7 +38,7 @@ $bg_headerWrapper = ot_get_option('header__bg');
 				<object
 				  type="image/svg+xml"
 				  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.svg">
-				  <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.png">
+				  <!-- <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgHeader.png"> -->
 				</object>
 	        </div>
 		</div>
@@ -170,8 +170,7 @@ $bg_quote = ot_get_option('quote__bg');
 					<object
 					  type="image/svg+xml"
 					  data="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.svg">
-					  <img
-					    src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.png">
+					  <!-- <img src="<?php echo get_template_directory_uri() ?>/img/svg-files/logoSvgQoute.png"> -->
 					</object>
 				</div>
 			</div>
@@ -232,6 +231,7 @@ $bg_quote = ot_get_option('quote__bg');
 	<?php if (ot_get_option( 'profit__title' )) {?>
 	     <h2><?php echo ot_get_option( 'profit__title' ); ?></h2>
 	<?php } ?>	
+	<!-- <h2><?php pll_e('profit' ); ?></h2> -->
 	<div class="profitWrapp">
 		
 		<div class="profitWrapp__firstLine">
@@ -747,9 +747,9 @@ $bg_quote = ot_get_option('quote__bg');
           </div>
         </div><!-- //ctaMainForm -->
   
-    <p class="privacy-policy">Оставляя заявку, вы соглашаетесь c </br>
+    <p class="privacy-policy"><?php pll_e('privPolicy-lng'); ?> </br>
     	<a href="<?php echo get_template_directory_uri() ?>/documents/personal.pdf" target="_blank"  >
-           обработкой персональных данных
+           <?php pll_e('privPolicy-link-lng'); ?> 
         </a>
     </p>
     </div>
