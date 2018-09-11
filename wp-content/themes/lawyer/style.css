@@ -21,6 +21,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
+
+
+
 .profitItem.profitItem__bg_1{
 	background-image: url(img/profit-img-bg1.png) !important;
 }
@@ -118,7 +121,7 @@ html.js .loader_inner {
 }
 
 .header_phone {
-	display: none!important; 
+	/*display: none!important; */
 }
 }
 

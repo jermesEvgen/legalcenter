@@ -280,7 +280,7 @@ jQuery(document).ready(function(){
                 jQuery('.hamburger').addClass('hamburger__scroll');
                 jQuery('.hamburger-title').addClass('js-hamburger-title__scroll');
 
-                jQuery('.languages li a').addClass('js-header-phone');
+                // jQuery('.languages li a').addClass('js-header-phone');
 
                 jQuery('.headerMain').css('background-color','#fff');
                 jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoScroll2.png">');
@@ -288,7 +288,7 @@ jQuery(document).ready(function(){
               }
                else if (jQuery(this).scrollTop()<100){
                 jQuery('.hamburger').removeClass('hamburger__scroll');
-                jQuery('.languages li a').css('color','#fff');
+                // jQuery('.languages li a').css('color','#fff');
 
 
                 jQuery('.headerMain').css('background-color','transparent');
@@ -302,7 +302,7 @@ jQuery(document).ready(function(){
          jQuery(window).scroll(function(){
          
              if(jQuery(this).scrollTop()>100){
-              jQuery('.languages li a').addClass('js-header-phone');
+              // jQuery('.languages li a').addClass('js-header-phone');
               jQuery('.headerMain').css('background-color','#fff');
               jQuery('.hamburger-title').addClass('js-hamburger-title__scroll');
               jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoScroll2.png">');
@@ -310,7 +310,7 @@ jQuery(document).ready(function(){
               jQuery('.header_phone').addClass('js-header-phone');
             }
              else if (jQuery(this).scrollTop()<100){
-              jQuery('.languages li a').css('color','#fff');
+              // jQuery('.languages li a').css('color','#fff');
               jQuery('.hamburger-title').removeClass('js-hamburger-title__scroll');
               jQuery('.headerMain').css('background-color','transparent');
               jQuery('.headerMain__logo').wrapInner('<img src="http://lawyer.io/wp-content/uploads/2018/05/logoHeader2.png">');
@@ -536,8 +536,6 @@ jQuery(document).ready(function(){
 
 
 
-
-
 /* -------------------------
 
 Русские элементы на странице 
@@ -588,6 +586,8 @@ removeClasses = function (selector, classArray) {
 };
 
 
+var engli = document.querySelector('.lang-item-en');
+var ruli = document.querySelector('.lang-item-ru');
 
 
 
@@ -596,10 +596,13 @@ removeClasses = function (selector, classArray) {
      console.log( 'Это англ версия');
      addClasses('.rusForm', ['version-hide']);
      removeClasses('.enForm', ['version-hide']);
+     engli.style.display = 'none';
     }else{
      console.log( 'Это рус версия');
      removeClasses('.rusForm', ['version-hide']);
      addClasses('.enForm', ['version-hide']);
+     engli.style.display = 'block';
+     ruli.style.display = 'none';
   }
   
   // if ( en === companyEn){
@@ -719,4 +722,5 @@ removeClasses = function (selector, classArray) {
        //     //Если элемент с id-шником element_id не найден, то выводим сообщение
        //     else console.log("Элемент с id: " + element_id + " не найден!"); 
        // };  
+
 

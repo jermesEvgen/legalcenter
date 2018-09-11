@@ -32,8 +32,7 @@ $bg_headerWrapper = ot_get_option('header__bg');
 <section class="headerWrapper" >
 	<aside >
 		<!-- Белый логотип  -->
-		<div class="logo__mobile" >
-  
+		<div class="logo__mobile" >  
 	        <div id="logoRus" >
 				<object
 				  type="image/svg+xml"

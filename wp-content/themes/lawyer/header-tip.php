@@ -42,17 +42,20 @@
 							<li><a  href="http://lawyer.io/kontakty"><?php pll_e('menu-item-4' ); ?></a></li>
 	                        <li><a href="tel:+78182408800" class="header__info_phnmedia" >+7 (8182) 40-88-00</a></li>
 	                        <li><a href="#ctaForm" class="headerMain__btn smoothscroll"><?php pll_e('menu-item-btn' ); ?> </a></li>
+						   	<li>
+   						        <ul  class="languages" id="languages__tip">
+   		                           <?php pll_the_languages(array(
+   						  	       	// 'show_flags'=>2,
+   						  	       	'show_names'=>1
+   						  	       )); ?> 
+   						  	    </ul>
+						   	</li>
 						</ul>
 					</nav> 
 
 					<div class="headerMain__top_cta">
 					   <a class="header_phone" href="tel:+78182408800"  > <i class="material-icons">phone</i>+7 (8182) 40-88-00</a>	
-				        <ul  class="languages" id="languages__tip">
-                           <?php pll_the_languages(array(
-				  	       	'show_flags'=>2,
-				  	       	'show_names'=>1
-				  	       )); ?> 
-				  	    </ul>
+				        
 				    </div>
 
 			

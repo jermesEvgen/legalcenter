@@ -346,7 +346,7 @@ endif
 
     <a href="<?php echo get_template_directory_uri() ?>/documents/price.pdf" target="_blank" >
       <div class="tablica__price_mobile">
-          <img  src="http://legalcenter.pro/wp-content/uploads/2018/03/icon-pdf.png" alt="">
+          <img  src="http://lawyer.webdelmaster.ru/wp-content/uploads/2018/08/icon-pdf.png" alt="">
           <span class="tablica__price_mobile btn"> Смотреть прайс</span>
       </div>
     </a>

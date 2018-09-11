@@ -143,14 +143,16 @@ header {
 	width: 100%;
 }
 .headerWrapper {
-	/*height: 100vh;*/
+	height: 130vh;
+	padding: 3em 0;
+	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: relative;
+	
 }
 
 .headerMain__top {
@@ -287,7 +289,7 @@ color: #314368!important;
 aside {
 	width: 100%;
     height: 100%;
-	margin: 3em auto;
+	margin: 0 auto;
 	max-width: 800px;
     text-align: center;
 	display: flex;
@@ -302,7 +304,7 @@ aside h3 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-self: center;
+	align-items: center;
 }
 
 a.mouse {
@@ -404,7 +406,7 @@ aside {
 		position: absolute;
 		left: 50%;
 		margin-left: -17.5px;
-		top: 13%;
+		top: 0;
 	    display: block;
 	    height: 4px;
 	    width: 35px;
@@ -415,7 +417,7 @@ aside {
 	.hamburger:before {
 		transition: all 0.2s;
 		content: '';
-		margin-top: -10px;
+		margin-top: -12px;
 	}
 	.hamburger:after {
 		transition: all 0.2s;
@@ -2596,7 +2598,7 @@ div.wpcf7-mail-sent-ok {
 		padding:2em 0; 
 	}
 	aside {
-		width: 90%;
+		width: 95%;
 		/*margin: 0 auto;*/
 		display: flex;
 	}

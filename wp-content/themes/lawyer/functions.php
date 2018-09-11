@@ -94,11 +94,13 @@ function lawyer_style() {
 	wp_enqueue_style( 'lawyer-fonts' , get_template_directory_uri() . '/src/css/fonts.css', array ( 'lawyer-style' ) ); 
 	/*Media*/
 	// wp_enqueue_style( 'lawyer-media' , get_template_directory_uri() . '/src/css/media.css');
+
+
+	/*bundle.min.css*/
+	wp_enqueue_style( 'bundle-min-css' , get_template_directory_uri() . '/css/bundle.min.css'); 
+	
 	/* custom-css */
 	// wp_enqueue_style( 'lawyer-custom-css' , get_template_directory_uri() . '/src/css/custom-css.css'); 
-
-   /*bundle.min.css*/
-	wp_enqueue_style( 'bundle-min-css' , get_template_directory_uri() . '/css/bundle.min.css'); 
 	/* Главные стили*/
 	wp_enqueue_style( 'lawyer-style', get_stylesheet_uri() );
 
@@ -230,6 +232,7 @@ function xelly_remove_menu_items() {
       $translated = str_ireplace(  'Contact Form 7',  'Формы обратной связи',  $translated );
       $translated = str_ireplace(  'Записи',  'Социальные сети',  $translated );
       $translated = str_ireplace(  'WP Security',  'Антивирус',  $translated );
+      $translated = str_ireplace(  'Languages',  'Язык заморский',  $translated );
       return $translated;
     }
 function my_wp_default_styles($styles) {
@@ -293,47 +296,3 @@ function register_strings() {
 add_action('init','register_strings'); 
 
 
-
-	/**
-	 * Show Polylang Languages with Custom Markup
-	 * @param  string $class Add custom class to the languages container
-	 * @return string        
-	 */
-
-// function rarus_polylang_languages( $class = '' ) {
-//   if ( ! function_exists( 'pll_the_languages' ) ) return;
-//   // Gets the pll_the_languages() raw code
-//   $languages = pll_the_languages( array(
-//     'display_names_as'       => 'slug',
-//     'hide_if_no_translation' => 1,
-//     'raw'                    => true
-//   ) ); 
-//   $output = '';
-//   // Checks if the $languages is not empty
-//   if ( ! empty( $languages ) ) {
-//     // Creates the $output variable with languages container
-//     $output = '<div class="languages' . ( $class ? ' ' . $class : '' ) . '">';
-//     // Runs the loop through all languages
-//     foreach ( $languages as $language ) {
-//       // Variables containing language data
-//       $id             = $language['id'];
-//       $slug           = $language['slug'];
-//       $url            = $language['url'];
-//       $current        = $language['current_lang'] ? ' languages__item--current' : '';
-//       $no_translation = $language['no_translation'];
-//       // Checks if the page has translation in this language
-//       if ( ! $no_translation ) {
-//         // Check if it's current language
-//         if ( $current ) {
-//           // Output the language in a <span> tag so it's not clickable
-//           $output .= "<span class=\"languages__item$current\">$slug</span>";
-//         } else {
-//           // Output the language in an anchor tag
-//           $output .= "<a href=\"$url\" class=\"languages__item$current\">$slug</a>";
-//         }
-//       }
-//     }
-//     $output .= '</div>';
-//   }
-//   return $output;
-// }
